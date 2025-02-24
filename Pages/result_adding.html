@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Result Panel</title>
+</head>
+<body>
+  <form action="../Php/result_adding.php" method="post">
+      <table class="result" id="result" border="2">
+        <tr>
+          <th class="headers">Student_Number</th>
+          <th class="headers">Full_Name</th>
+          <th class="headers">Kiswahili</th>
+          <th class="headers">English</th>
+          <th class="headers">French</th>
+          <th class="headers">Civics</th>
+          <th class="headers">Computer_Science</th>
+          <th class="header__1">Historia Ya Tanzania</th>
+          <th class="header__1">Physics</th>
+          <th class="header__1">Chemistry</th>
+          <th class="header__1">Biology</th>
+          <th class="header__1">Geography</th>
+          <th class="header__1">B/Knowledge</th>
+          <th class="header__1">B/Mathematics</th>
+        </tr>
+        <tr>
+          <td><input type="text" name="student_number"></td>
+          <td><input type="text" name="fullname"></td>
+          <td><input type="number" name="kiswahili"></td>
+          <td><input type="number" name="english"></td>
+          <td><input type="number" name="french"></td>
+          <td><input type="number" name="civics"></td>
+          <td><input type="number" name="cs"></td>
+          <td><input type="number" name="historia"></td>
+          <td><input type="number" name="physics"></td>
+          <td><input type="number" name="chemistry"></td>
+          <td><input type="number" name="biology"></td>
+          <td><input type="number" name="geography"></td>
+          <td><input type="number" name="bibleKnowledge"></td>
+          <td><input type="number" name="basicMath"></td>
+          <!-- <td><input type="text"></td> -->
+        </tr>
+      </table>
+      <button type="submit">Add Results</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #FFD700, #fff);
+  color: #2E2E2E;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.main-header {
+  background-color: #FFD700;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.form-section, .contact-section, .admin-login {
+  margin: 2rem auto;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+.form-section form, .contact-section form, .admin-login form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form-section form input, .form-section form textarea, .contact-section form input, .contact-section form textarea, .admin-login form input, .admin-login form textarea {
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #2E2E2E;
+}
+.form-section form button, .contact-section form button, .admin-login form button {
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.form-section form button:hover, .contact-section form button:hover, .admin-login form button:hover {
+  background-color: #3d8b40;
+}
+
+.main-footer {
+  margin-top: auto;
+  padding: 1rem;
+  background: #2E2E2E;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .form-section, .contact-section, .admin-login {
+    width: 90%;
+  }
+}/*# sourceMappingURL=result.css.map */
