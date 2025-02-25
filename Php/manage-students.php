@@ -1,0 +1,79 @@
+<?php
+    // Database configuration
+    $host = 'localhost';
+    $username = 'root';
+    $password = '';
+    $dbname = 'kasita_seminary';
+
+    // Create connection
+    $conn = new mysqli($host, $username, $password, $dbname);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Students - Kasita Seminary Admin</title>
+    <link rel="stylesheet" href="../Styles/admins.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <h2>Admin Panel</h2>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.php">Dashboard</a></li>
+                    <li><a href="manage-staff.php">Staff Management</a></li>
+                    <li><a href="manage-workers.php">Workers Management</a></li>
+                    <li><a href="manage-students.php">Students Management</a></li>
+                    <li><a href="../Pages/index.html">Home</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <header>
+                <h1>Add Students</h1>
+            </header>
+
+            <section class="user-form">
+                <form action="submit-student.php" method="POST" id="form">
+                    <label for="form">Class:</label>
+                    <select name="form" id="form">
+                        <option value="form_one">Form One</option>
+                        <option value="form_two">Form Two</option>
+                        <option value="form_three">Form three</option>
+                        <option value="form_four">Form four</option>
+                        <option value="form_five">Form five</option>
+                        <option value="form_six">Form six</option>
+                    </select>
+                    <label for="firstname">
+                        First Name:
+                    </label>
+                    <input type="text" name="firstname" id="firstname" required>
+                    <label for="middlename">Middle Name:</label>
+                    <input type="text" name="middlename" id="middlename" required><br><br>
+
+                    <label for="lastname">Last Name:</label>
+                    <input name="lastname" id="lastname" required>
+                    <label for="parentname">Parent Name:</label>
+                    <input type="text" name="parentname" id="parentname">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" name="phone" id="phone"><br><br>
+                    <button type="submit" name="upload">Add Student</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.querySelector('form').reset();
+    </script>
+</body>
+</html>

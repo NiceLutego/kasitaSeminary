@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #FFD700, #fff);
+  color: #2E2E2E;
+  text-align: center;
+  min-height: 100vh;
+}
+body .uploaded_haeder {
+  background-color: #FFD700;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+body table {
+  width: 100%;
+}
+body table th {
+  height: 6vh;
+}/*# sourceMappingURL=newsFetch.css.map */

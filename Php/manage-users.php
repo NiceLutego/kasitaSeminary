@@ -13,10 +13,10 @@
             <nav>
                 <ul>
                     <li><a href="dashboard.php">Dashboard</a></li>
-                    <li><a href="manage-media.php">Manage Media</a></li>
-                    <li><a href="post-news.php">Post News</a></li>
-                    <li><a href="manage-users.php">User Management</a></li>
-                    <li><a href="#">Settings</a></li>
+                    <li><a href="manage-staff.php">Staff Management</a></li>
+                    <li><a href="manage-workers.php">Workers Management</a></li>
+                    <li><a href="manage-students.php">Students Management</a></li>
+                    <li><a href="../Pages/index.html">Home</a></li>
                 </ul>
             </nav>
         </aside>
@@ -26,15 +26,10 @@
                 <h1>Manage Users</h1>
             </header>
 
-            <section class="user-list">
-                <h2>Registered Users</h2>
-                <ul>
-                    <li>User 1 <button>Delete</button></li>
-                    <li>User 2 <button>Delete</button></li>
-                    <!-- Add more users here -->
-                </ul>
-
-                <button onclick="location.href='add-user.php'">Add New User</button>
+            <section class="user-list" style="display:flex;flex-direction:row;gap:3vw;align-items:center;justify-content:center;">
+                <button onclick="location.href='manage-staff.php'">Add Teachers</button>
+                <button onclick="location.href='manage-workers.php'">Add Workers</button>
+                <button onclick="location.href='manage-students.php'">Add Students</button>
             </section>
         </main>
     </div>

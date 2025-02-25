@@ -1,3 +1,12 @@
+<?php
+    // Database Connection
+    $pdo = new PDO('mysql:host=localhost;dbname=Kasita_Seminary', 'root', '');
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+      // Fetch Media
+    $media = $pdo->query('SELECT * FROM media')->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +25,7 @@
                     <li><a href="manage-media.php">Manage Media</a></li>
                     <li><a href="post-news.php">Post News</a></li>
                     <li><a href="manage-users.php">User Management</a></li>
-                    <li><a href="#">Settings</a></li>
+                    <li><a href="../Pages/index.html">Home</a></li>
                 </ul>
             </nav>
         </aside>
@@ -27,18 +36,15 @@
             </header>
 
             <section class="media-actions">
-                <form action="upload-media.php" method="POST" enctype="multipart/form-data">
-                    <label for="media">Upload Media:</label>
-                    <input type="file" name="media" id="media">
-                    <button type="submit">Upload</button>
-                </form>
-
+                <h1 style="text-align:center;font-weight:600;">Welcome Admin-manage your media here</h1>
                 <h2>Existing Media Files</h2>
                 <ul>
-                    <li><img src="media/img1.jpg" alt="Media 1"><button>Delete</button></li>
-                    <li><img src="media/img2.jpg" alt="Media 2"><button>Delete</button></li>
+                    <li>  
+                    <img src="<?php echo htmlspecialchars($item['file_path'])?>"><button>Delete</button></li>
+                    <!-- <li><img src="media/img2.jpg" alt="Media 2"><button>Delete</button></li> -->
                     <!-- Add more media files here -->
                 </ul>
+                <button type="button" onclick="location.href='upload-media.php'">Upload News</button>
             </section>
         </main>
     </div>

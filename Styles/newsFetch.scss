@@ -1,0 +1,28 @@
+$primary-color: #FFD700;
+$secondary-color: #2E2E2E;
+$accent-color: #4CAF50;
+
+body{
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, $primary-color, #fff);
+  color: $secondary-color;
+  text-align: center;
+  min-height: 100vh;
+
+
+  .uploaded_haeder{
+    background-color: $primary-color;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: #fff;
+  }
+
+  table{
+    width: 100%;
+
+    th{
+      height: 6vh;
+    }
+  }
+}

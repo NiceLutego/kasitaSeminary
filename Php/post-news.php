@@ -28,6 +28,10 @@
 
             <section class="news-form">
                 <form action="submit-news.php" method="POST">
+                    <label for="date">
+                        Date:
+                    </label>
+                    <input type="date" name="date" id="date" required>
                     <label for="title">News Title:</label>
                     <input type="text" name="title" id="title" required>
 
