@@ -11,7 +11,13 @@ $conn = new mysqli($servername, $username, $password, $database);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+session_start();
 
+// Redirect to login page if the user is not an admin
+if (!isset($_SESSION['admin_logged_in']) || !$_SESSION['admin_logged_in']) {
+    header('Location: login.html');
+    exit();
+}
 // Handle admin login with hashed passwords
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['username'], $_POST['password'])) {
     $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
@@ -21,13 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['username'], $_POST['pa
     $stmt->execute();
     $stmt->bind_result($hashed_password);
     $stmt->fetch();
-    if (password_verify($password, $password)) {
-        $_SESSION['admin'] = $username;
-        $_SESSION['admin1234'] = $password;
-        echo "Admin login successful!";
-    } else {
-        echo "Invalid credentials.";
-    }
 }
     $stmt->close();
 

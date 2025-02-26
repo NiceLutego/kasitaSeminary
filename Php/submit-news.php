@@ -22,7 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['date'], $_POST['title'
       $stmt = $conn->prepare("INSERT INTO new_post (event_date, title, content) VALUES (?, ?, ?)");
       $stmt->bind_param("sss", $date, $title, $content);
       if ($stmt->execute()) {
-          
+          header("location:post-news.php");
+          exit();
       } else {
           echo "Error: " . $stmt->error;
       }
@@ -32,42 +33,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['date'], $_POST['title'
   }
 }
 
-$sql = "SELECT * FROM new_post ORDER BY created_at DESC";
-$result = $conn->query($sql);
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Uploaded news</title>
-  <link rel="stylesheet" href="../Styles/newsFetch.css">
-</head>
-<body>
-  <main class="uploaded_haeder">
-    <h1>Your News are here</h1>
-  </main>
-  <table border="1">
-    <tr>
-      <th>ID</th>
-      <th>TITLE</th>
-      <th>CONTENT</th>
-      <th>DATE</th>
-      <th>POSTED AT</th>
-    </tr>
-    <?php while($row = $result->fetch_assoc()) { ?>
-    <tr>
-    <td><?= $row['id'] ?></td>
-            <td><?= $row['title'] ?></td>
-            <td><?= $row['content'] ?></td>
-            <td><?= $row['event_date'] ?></td>
-            <td><?= $row['created_at'] ?></td>
-    </tr>
-    <?php } ?>
-  </table>
-</body>
-</html>
-<?php
 $conn->close();
 ?>

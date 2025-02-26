@@ -1,0 +1,152 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #004d40;
+  padding: 1rem 2rem;
+  color: #fff;
+  width: 95%;
+  z-index: 2;
+  position: fixed;
+
+  &__logo__burger {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  &__nav__menu {
+    display: flex;
+    list-style: none;
+
+    &__item {
+      margin: 0 1rem;
+
+      &__link {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-size: 2vw;
+
+        &:hover {
+          color: #ffd54f;
+        }
+      }
+    }
+  }
+}
+.about__outside {
+  text-align: center;
+  margin-top: 10%;
+
+  h1 {
+    color: #004d40;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    & > div {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      width: 500px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 5%;
+
+      h3 {
+        margin-top: 0;
+      }
+    }
+  }
+}
+button{
+  width: 20vw;
+  height: 8vh;
+  font-size: 2vw;
+  align-items: center;
+  margin-left: 45%;
+  margin-bottom: 2%;
+  border-radius: 10px;
+  background-color: indigo;
+  font-weight: 500;
+  color: #fff;
+
+  &:hover{
+    background-color: limegreen;
+    transition: all 1s ease-in-out;
+    color: indigo;
+  }
+}
+.footer {
+  text-align: center;
+  padding: 1rem 1rem;
+  background: #004d40;
+  color: #fff;
+  margin-top: auto;
+  width: 100%;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .footer__links {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+
+    a {
+      color: #ffd54f;
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header__nav__menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about__outside{
+    margin-top: 30%;
+  }
+  .about__outside div {
+    flex-direction: column;
+    transform: translateX(-2%);
+    text-align: center;
+  }
+
+  .footer {
+    padding: 1rem 0.5rem;
+
+    .footer__links {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+}
+

@@ -11,12 +11,7 @@ body{
   text-align: center;
   min-height: 100vh;
 }
-.header_news{
-  background-color: #FFD700;
-  padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  color: #fff;
-}
+
 .news_bar{
   h2{
     margin-top: 2%;
@@ -29,11 +24,16 @@ body{
   padding: 3rem 0;
   margin-left: 3rem;
   overflow: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2vw;
 }
 .notice-container {
   display: flex;
   top: 0;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-between;
 }
 .notice-bord,
@@ -66,12 +66,6 @@ body{
   .new-text{
     color: red;
   }
-}
-.notice-bord li img {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  border: 2px solid red;
 }
 .notice-bord li p {
   margin: 0;

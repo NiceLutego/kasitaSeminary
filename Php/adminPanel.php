@@ -1,62 +1,52 @@
-<?php
-$servername = "localhost";
-$username = "root";  
-$password = "";  
-$database = "kasita_junior_seminary";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Fetch messages
-$sql = "SELECT * FROM messages ORDER BY created_at DESC";
-$result = $conn->query($sql);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel - Messages</title>
-    <link rel="stylesheet" href="admin.css">
-
-    <style>
-      body{
-        background-color: lightgreen;
-      }
-    </style>
+    <title>Kasita Seminary Admin Dashboard</title>
+    <link rel="stylesheet" href="../Styles/admins.css">
 </head>
 <body>
-    <h2>Contact Messages</h2>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Full Name</th>
-            <th>Email</th>
-            <!-- <th>Phone</th> -->
-            <th>Message</th>
-            <th>Submitted At</th>
-        </tr>
-        <?php while ($row = $result->fetch_assoc()) { ?>
-        <tr>
-            <td><?= $row['id'] ?></td>
-            <td><?= $row['name'] ?></td>
-            <td><?= $row['email'] ?></td>
-            <!-- <td><?= $row['phone'] ?></td> -->
-            <td><?= $row['message'] ?></td>
-            <td><?= $row['created_at'] ?></td>
-        </tr>
-        <?php } ?>
-    </table>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <h2>Admin Panel</h2>
+            <nav>
+                <ul>
+                    <li><a href="../Php/dashboard.php">Dashboard</a></li>
+                    <li><a href="../Php/manage-media.php">Manage Media</a></li>
+                    <li><a href="../Php/post-news.php">Post News</a></li>
+                    <li><a href="../Php/manage-users.php">User Management</a></li>
+                    <li><a href="../Pages/index.html">Home</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <header>
+                <h1>Welcome, Admin</h1>
+            </header>
+
+            <section class="dashboard-widgets">
+                <div class="widget">
+                    <h3>Total Media</h3>
+                    <p>120</p>
+                </div>
+                <div class="widget">
+                    <h3>Total News Posts</h3>
+                    <p>45</p>
+                </div>
+                <div class="widget">
+                    <h3>Registered Users</h3>
+                    <p>300</p>
+                </div>
+            </section>
+
+            <section class="admin-actions">
+                <button onclick="location.href='manage-media.php'">Manage Media</button>
+                <button onclick="location.href='post-news.php'">Post News</button>
+                <button onclick="location.href='manage-users.php'">Manage Users</button>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
-
-<?php
-$conn->close();
-?>

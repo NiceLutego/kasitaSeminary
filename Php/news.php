@@ -14,9 +14,30 @@ $media = $pdo->query('SELECT * FROM media')->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="../Styles/main.css">
 </head>
 <body>
-  <header class="header_news" id="header_news">
-    <h1>Welcome to Kasita Junior Seminary-News Panel</h1>
-  </header>
+<div class="header">
+    <div class="header__logo">
+     <span class="header__logo__burger"></span>
+    </div>
+    <nav class="header__nav">
+        <ul class="header__nav__menu">
+          <li class="header__nav__menu__item">
+            <a href="../Pages/index.html" class="header__nav__menu__item__link">Home</a>
+          </li>
+          <li class="header__nav__menu__item">
+            <a href="../Php/about.php" class="header__nav__menu__item__link">About</a>
+          </li>
+          <li class="header__nav__menu__item">
+            <a href="../Pages/login.html" class="header__nav__menu__item__link">Administration</a>
+          </li>
+          <li class="header__nav__menu__item">
+            <a href="../Php/departments.php" class="header__nav__menu__item__link">Departments</a>
+          </li>
+          <li class="header__nav__menu__item">
+            <a href="../Php/contacs.php" class="header__nav__menu__item__link">Contacts</a>
+          </li>
+        </ul>
+    </nav>
+  </div>
   <main class="news_bar" id="news_bar">
     <h2>Navigate bottom of this page to view latest news</h2>
     <section class="notice_board" id="notice_board">

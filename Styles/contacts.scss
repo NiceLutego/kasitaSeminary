@@ -1,0 +1,322 @@
+$primary-color:#272727;
+$secondary-color:#ff562f;
+$text-color:teal;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes announce{
+  from{
+    color: set-text-color($primary-color);
+    font-size: 2vw;
+  }
+  to{
+    color: indigo;
+    font-size: 3vw;
+  }
+}
+@mixin keyframes{
+  @keyframes news{
+    from {
+
+    }to{
+
+    }
+  }
+}
+@function set-text-color($color){
+  @if(lightness($color)>40%){
+    @return #000;
+  }@else{
+    @return #fff;
+  }
+}
+@keyframes pop{
+    from{
+      opacity: 1;
+    }
+    to{
+      opacity: 0.5;
+    }
+  }
+@mixin transition-ease{
+  transition: all 0.5s ease-in-out;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Header */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header__logo__burger {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin-top: 6px;
+  position: relative;
+}
+
+.header__nav ul {
+  display: flex;
+}
+
+.header__nav__menu__item {
+  margin-left: 20px;
+}
+
+.header__nav__menu__item__link {
+  color: white;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.header__nav__menu__item__link:hover {
+  background-color: #575757;
+}
+
+/* Contacts Section */
+.contacts {
+  padding: 3rem;
+  background-color: #fff;
+}
+
+.contacts__footer {
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+
+.contacts__footer__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.contacts__footer__container__column {
+  flex: 1;
+  padding: 1rem;
+}
+
+.contacts__footer__container__column h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.contacts__footer__container__column a {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contacts__footer__container__column a:hover {
+  color: #ffcc00;
+}
+
+.contacts__footer__button {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 1rem;
+}
+
+.contacts__container {
+  margin-top: 3rem;
+}
+
+.contacts__container__1 {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.contacts__container__1__contactForm__form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contacts__container__1__contactForm__form-group label {
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.contacts__container__1__contactForm__form-group input,
+.contacts__container__1__contactForm__form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contacts__container__1__contactForm__form-group textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #575757;
+}
+
+.feedback {
+  margin-top: 1rem;
+  color: green;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header__nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__nav__menu__item {
+    margin: 10px 0;
+  }
+
+  .contacts__footer__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contacts__footer__container__column {
+    margin-bottom: 1rem;
+  }
+
+  .contacts__container__1 {
+    padding: 1.5rem;
+  }
+}
+/* Base Styles */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+/* Footer Styles */
+.contacts__footer {
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Footer Container */
+.contacts__footer__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.contacts__footer__container__column {
+  flex: 1;
+  padding: 1rem;
+}
+
+.contacts__footer__container__column h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.contacts__footer__container__column a {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contacts__footer__container__column a:hover {
+  color: #ffcc00;
+}
+
+.contacts__footer__button {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 1rem;
+}
+
+/* Contact Form Styling */
+.contacts__container {
+  margin-top: 3rem;
+  padding: 0 2rem;
+}
+
+/* Contact Form Section */
+.contacts__container__1 {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+/* Other form styles remain unchanged... */
+
