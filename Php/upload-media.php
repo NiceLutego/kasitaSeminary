@@ -1,5 +1,6 @@
 <?php
     // Database Connection
+    ob_start();
     $pdo = new PDO('mysql:host=localhost;dbname=Kasita_Seminary', 'root', '');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 ?>
@@ -22,7 +23,7 @@
                     <li><a href="manage-media.php">Manage Media</a></li>
                     <li><a href="post-news.php">Post News</a></li>
                     <li><a href="manage-users.php">User Management</a></li>
-                    <li><a href="#">Settings</a></li>
+                    <li><a href="../Pages/index.html">Home</a></li>
                 </ul>
             </nav>
         </aside>
@@ -43,7 +44,9 @@
                 </select>
                 <label>File:</label>
                 <input type="file" name="file" required>
-                <button type="submit" name="upload">Upload</button>
+                <label for="description">Description:</label>
+                <input type="text" name="description" id="description">
+                <button type="submit" name="upload" style="margin-left:40%;margin-top:2%;width:30%;font-size:1.6vw;">Upload</button>
             </form>
             <?php
     // Handle File Upload
@@ -90,25 +93,6 @@
         // Fetch Media
         $media = $pdo->query('SELECT * FROM media')->fetchAll(PDO::FETCH_ASSOC);
         ?>
-
-
-                <h2>Existing Media Files</h2>
-                <ul>
-                <?php foreach ($media as $item): ?>
-                    <li>
-                    <strong><?php echo htmlspecialchars($item['title']); ?></strong> - <?php echo htmlspecialchars($item['type']); ?><br>
-                    <?php if ($item['type'] === 'image'): ?>
-                    <img src="<?php echo htmlspecialchars($item['file_path']); ?>" style="width:40vw;height:40vh;" alt="<?php echo htmlspecialchars($item['title']); ?>">
-                    <?php elseif ($item['type'] === 'video'): ?>
-                      <video controls style="max-width:200px; max-height:200px;">
-                      <source src="<?php echo htmlspecialchars($item['file_path']); ?>" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                <?php endif; ?>
-            </li>
-        <?php endforeach; ?>
-                    <!-- Add more media files here -->
-                </ul>
             </section>
         </main>
     </div>

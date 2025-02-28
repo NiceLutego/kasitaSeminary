@@ -7,12 +7,6 @@ body {
   min-height: 100vh;
 }
 
-.news_bar h2 {
-  margin-top: 2%;
-  color: teal;
-  font-size: 3vw;
-}
-
 .main-notice-section {
   background-color: var(--bg);
   padding: 3rem 0;
@@ -43,6 +37,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 1%;
 }
 
 .notice-bord h2 {
@@ -132,43 +127,6 @@ body {
     margin-top: 2rem;
   }
 }
-.posts_header {
-  color: #fff;
-  font-size: 3vw;
-  font-weight: 600;
-}
-
-.posts_list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 3vw;
-  list-style: none;
-}
-.posts_list li {
-  width: 40%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  color: #fff;
-  border-radius: 10px;
-}
-.posts_list li .post_title {
-  font-size: 1.2vw;
-  font-weight: 600;
-  color: indigo;
-}
-.posts_list li .post_image {
-  width: 100%;
-  height: 70vh;
-}
-.posts_list li .post_image:hover {
-  transform: scale(1.05);
-  transition: all ease-in-out 0.5s;
-}
-.posts_list li .post_video {
-  width: 100%;
-  height: 70vh;
-}
-
 /* General Styles */
 body {
   font-family: Arial, sans-serif;

@@ -110,12 +110,13 @@ body {
     padding: 1rem;
     border-radius: 8px;
     height: 45vh;
-    color: rgb(147, 27, 149);
     transition: all 1s ease;
     font-weight: 500;
     text-align: center;
     font-weight: 500;
     font-size: 1.5vw;
+    color: #ffffff; /* White text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Dark shadow */
   }
 
   @keyframes form_one{

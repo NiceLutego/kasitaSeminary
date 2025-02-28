@@ -1,6 +1,7 @@
 <?php
 
 // Database Connection
+ob_start();
 $pdo = new PDO('mysql:host=localhost;dbname=Kasita_Seminary', 'root', '');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $media = $pdo->query('SELECT * FROM media')->fetchAll(PDO::FETCH_ASSOC);
@@ -39,7 +40,6 @@ $media = $pdo->query('SELECT * FROM media')->fetchAll(PDO::FETCH_ASSOC);
     </nav>
   </div>
   <main class="news_bar" id="news_bar">
-    <h2>Navigate bottom of this page to view latest news</h2>
     <section class="notice_board" id="notice_board">
       <div class="main-notice-section" 
              id="notice-bord-sction">
@@ -110,22 +110,5 @@ $media = $pdo->query('SELECT * FROM media')->fetchAll(PDO::FETCH_ASSOC);
               </div>
       </section>
     </main>
-
-    <h2 class="posts_header">Latest News from Kasita Seminary.</h2>
-    <ul class="posts_list">
-        <?php foreach ($media as $item): ?>
-            <li>
-                <strong class="post_title"><?php echo htmlspecialchars($item['title']); ?></strong><strong><?php echo htmlspecialchars($item['created_at'])?></strong><br>
-                <?php if ($item['type'] === 'image'): ?>
-                    <img class="post_image" src="<?php echo htmlspecialchars($item['file_path']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>" width="200">
-                <?php elseif ($item['type'] === 'video'): ?>
-                    <video class="post_video"width="400" height="240" controls>
-                        <source src="<?php echo htmlspecialchars($item['file_path']); ?>" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                <?php endif; ?>
-            </li>
-        <?php endforeach; ?>
-    </ul>
 </body>
 </html>

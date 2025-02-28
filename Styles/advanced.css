@@ -104,7 +104,8 @@ body {
   padding: 1rem;
   border-radius: 8px;
   height: 43vh;
-  color: #333;
+  color: #ffffff; /* White text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Dark shadow */
 }
 
 .footer {
