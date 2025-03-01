@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KASITA SEMINARY</title>
+  <title>About Kasita Seminary</title>
   <link rel="stylesheet" href="../Styles/about.css">
   <link rel="stylesheet" href=
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -22,13 +22,16 @@
             <a href="../Php/about.php" class="header__nav__menu__item__link">About</a>
           </li>
           <li class="header__nav__menu__item">
+            <a href="../Php/staff_profiles.php" class="header__nav__menu__item__link">Staff</a>
+          </li>
+          <li class="header__nav__menu__item">
             <a href="../Pages/login.html" class="header__nav__menu__item__link">Administration</a>
           </li>
           <li class="header__nav__menu__item">
             <a href="../Php/departments.php" class="header__nav__menu__item__link">Departments</a>
           </li>
           <li class="header__nav__menu__item">
-            <a href="../Php/contacs.php" class="header__nav__menu__item__link">Contacts</a>
+            <a href="../Php/contacts.php" class="header__nav__menu__item__link">Contacts</a>
           </li>
         </ul>
     </nav>
@@ -56,11 +59,12 @@
   <div class="footer__links">
     <a href="../Pages/index.html">Home</a>
     <a href="../Php/about.php">About</a>
+    <a href="../Php/staff_profiles.php">Staff</a>
     <a href="../Pages/login.html">Administration</a>
     <a href="../Php/departments.php">Departments</a>
     <a href="../Php/contacts.php">Contact</a>
   </div>
-  <p>&copy; 2025 Kasita Minor Seminary. All Rights Reserved.</p>
+  <p>&copy; 2025 Kasita Seminary. All Rights Reserved.</p>
 </footer>
     <script src="../js/main.js"></script>
 </body>

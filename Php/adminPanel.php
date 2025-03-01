@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kasita Seminary Admin Dashboard</title>
     <link rel="stylesheet" href="../Styles/admins.css">
+      <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <div class="admin-container">
@@ -12,11 +14,16 @@
             <h2>Admin Panel</h2>
             <nav>
                 <ul>
-                    <li><a href="../Php/dashboard.php">Dashboard</a></li>
-                    <li><a href="../Php/manage-media.php">Manage Media</a></li>
-                    <li><a href="../Php/post-news.php">Post News</a></li>
-                    <li><a href="../Php/manage-users.php">User Management</a></li>
-                    <li><a href="../Pages/index.html">Home</a></li>
+                    <li>
+                        <a href="../Php/dashboard.php">Dashboard</a></li>
+                    <li>
+                    <a href="../Php/manage-media.php">Manage Media</a></li>
+                    <li>    
+                    <a href="../Php/post-news.php">Post News</a></li>
+                    <li>   
+                    <a href="../Php/manage-users.php">User Management</a></li>
+                    <li> 
+                    <a href="../Pages/index.html">Home</a></li>
                 </ul>
             </nav>
         </aside>

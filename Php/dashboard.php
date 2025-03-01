@@ -32,7 +32,8 @@
                     <li><a href="manage-media.php">Manage Media</a></li>
                     <li><a href="post-news.php">Post News</a></li>
                     <li><a href="manage-users.php">User Management</a></li>
-                    <li><a href="#">Settings</a></li>
+                    <li><a href="../Php/getMessages.php">Message Management</a></li>
+                    <li><a href="../Pages/index.html">Home</a></li>
                 </ul>
             </nav>
         </aside>
@@ -48,11 +49,11 @@
                     <p id="total-media">Loading...</p> <!-- IDs added for dynamic updates -->
                 </div>
                 <div class="widget">
-                    <h3>Total News Posts</h3>
+                    <h3>Total Deparments</h3>
                     <p id="total-news">Loading...</p>
                 </div>
                 <div class="widget">
-                    <h3>Registered Users</h3>
+                    <h3>Registered Staff</h3>
                     <p id="total-users">Loading...</p>
                 </div>
             </section>

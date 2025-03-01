@@ -52,11 +52,11 @@ $media = $conn->query($query);
 <body>
 
 <nav>
-    <a href="index.php">Home</a>
-    <a href="news.php">News</a>
-    <a href="gallery.php">Gallery</a>
-    <a href="calendar.php">School Calendar</a>
-    <a href="staff.php">Staff Profiles</a>
+    <a href="../Pages/index.html">Home</a>
+    <a href="about.php">About</a>
+    <a href="staff_profiles.php">Staff Profiles</a>
+    <a href="login.php">Administration</a>
+    <a href="departments.php">Staff Profiles</a>
     <a href="contact.php">Contact Us</a>
 </nav>
 

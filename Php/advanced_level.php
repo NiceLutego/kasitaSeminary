@@ -22,6 +22,9 @@
             <a href="../Php/about.php" class="header__nav__menu__item__link">About</a>
           </li>
           <li class="header__nav__menu__item">
+            <a href="../Php/staff_profile.php" class="header__nav__menu__item__link">Staff Profiles</a>
+          </li>
+          <li class="header__nav__menu__item">
             <a href="../Pages/login.html" class="header__nav__menu__item__link">Administration</a>
           </li>
           <li class="header__nav__menu__item">

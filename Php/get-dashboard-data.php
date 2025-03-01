@@ -15,16 +15,16 @@
     $mediaQuery=$pdo->query("SELECT COUNT(*) FROM media");
     $totalMedia=$mediaQuery->fetchColumn();
 
-    $newsQuery=$pdo->query("SELECT COUNT(*) FROM news_posts");
-    $totalNewsPosts=$newsQuery->fetchColumn();
+    $departmentsQuery=$pdo->query("SELECT COUNT(*) FROM departments");
+    $totalDepartments=$departmentsQuery->fetchColumn();
 
-    $usersQuery=$pdo->query("SELECT COUNT(*) FROM users");
-    $totalUsers=$usersQuery->fetchColumn();
+    $staffQuery=$pdo->query("SELECT COUNT(*) FROM staff");
+    $totalStaff=$staffQuery->fetchColumn();
 
     echo json_encode([
       'totalMedia'=>$totalMedia,
-      'totalNewsPosts'=>$totalNewsPosts,
-      'totalUsers'=>$totalUsers
+      'totalNewsPosts'=>$totalDepartments,
+      'totalUsers'=>$totalStaff
     ]);
 
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KASITA SEMINARY</title>
+  <title>Kasita Seminary Contacts</title>
   <link rel="stylesheet" href="../Styles/contacts.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -21,13 +21,16 @@
             <a href="../Php/about.php" class="header__nav__menu__item__link">About</a>
           </li>
           <li class="header__nav__menu__item">
+            <a href="../Php/staff_profiles.php" class="header__nav__menu__item__link">Staff</a>
+          </li>
+          <li class="header__nav__menu__item">
             <a href="../Pages/login.html" class="header__nav__menu__item__link">Administration</a>
           </li>
           <li class="header__nav__menu__item">
             <a href="../Php/departments.php" class="header__nav__menu__item__link">Departments</a>
           </li>
           <li class="header__nav__menu__item">
-            <a href="../Php/contacs.php" class="header__nav__menu__item__link">Contacts</a>
+            <a href="../Php/contacts.php" class="header__nav__menu__item__link">Contacts</a>
           </li>
         </ul>
     </nav>
@@ -84,10 +87,11 @@
       </div>
       <div class="contacts__footer__container__column">
         <h3>Follow Us</h3>
-        <a href="#">FaceBook</a>
-        <a href="#">Twitter</a>
+        <a href="#">Facebook</a>
+        <a href="#"> YouTube</a>
         <a href="#">Instagram</a>
         <a href="#">LinkedIn</a>
+        <a href="#">twitter</a>
       </div>
     </div>
     <p class="contacts__footer__button">

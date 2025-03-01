@@ -1,3 +1,10 @@
+$burger-color:#272727;
+$primary-color: #2c3e50;
+$secondary-color: #1abc9c;
+@mixin transition-ease{
+  transition: all 0.5s ease-in-out;
+}
+
 /* General Styles */
 body {
   font-family: Arial, sans-serif;
@@ -121,16 +128,6 @@ button{
 
 
 .about__name__division {
-  &__initial {
-    text-align: center;
-    font-size: 1.8rem;
-    margin: 2rem 0;
-  }
-
-  h3 {
-    color: #004d40;
-  }
-
   p {
     background: #e0f2f1;
     padding: 1rem;
@@ -174,13 +171,170 @@ button{
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .header__nav__menu {
-    flex-direction: column;
+
+  .header{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    width: 88%;
     align-items: center;
+    background-color: transparent;
+    right: 3%;
+    left: 0;
+
+    &__logo{
+      display: block;
+      align-items: right;
+      position: absolute;
+      z-index: 3;
+      right: 1rem;
+      top: 1rem;
+      height: 20px;
+      width: 28px;
+      cursor: pointer;
+      @include transition-ease;
+
+      &__burger{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0.5rem;
+        width: 28px;
+        height: 3px;
+        background-color: $burger-color;
+        @include transition-ease;
+        z-index: 2;
+
+        &::before{
+          content: '';
+          position: absolute;
+          top: -8px;
+          width: 28px;
+          height: 3px;
+          background-color: $burger-color;
+          @include transition-ease;
+        }
+
+        &::after{
+          content: '';
+          position: absolute;
+          top: 8px;
+          width: 28px;
+          height: 3px;
+          background-color: $burger-color;
+          @include transition-ease;
+        }
+
+        &.open{
+          transform: rotate(720deg);
+          background: transparent;
+
+          &::before{
+            transform: rotate(45deg) translate(5px, 8px);
+
+          }
+          &::after{
+            width: 28px;
+            transform: rotate(-45deg) translate(3px, -7px);
+          }
+        }
+      }
+    }
+
+    &__nav{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      opacity: 0.98;
+      visibility: hidden;
+
+      &.open{
+        visibility: visible;
+      }
+
+      &__menu{
+        margin-left: 30%;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: right;
+        width: 70vw;
+        height: 100vh;
+        gap: 0.3vh;
+        overflow: hidden;
+        background-color: $primary-color;
+        list-style-type: none;
+        padding-right: 1rem;
+        transform: translateY(-100%);
+        @include transition-ease;
+
+        &.open{
+          transform: translateY(0);
+        }
+
+        &__item{
+          transform: translateX(100vw);
+          @include transition-ease;
+          &.open{
+            transform: translateX(0);
+          }
+
+          &.active > a {
+            color: $secondary-color;
+          }
+          &__link{
+            width: auto;
+            display: inline-block;
+            font-size: 1rem;
+            text-transform: uppercase;
+            padding: 0.9rem 0;
+            font-weight: 600;
+            // border: 2px solid red;
+            @include transition-ease;
+            &:hover{
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
   }
 
+  @for $i from 1 through 6{
+
+    .header__nav__menu__item:nth-child(#{$i}){
+      transition-delay: ($i *0.1s) + 0.15s;
+    }
+  } 
+
+  // .header__nav__menu {
+  //   flex-direction: column;
+  //   align-items: center;
+  // }
+  .about{
+    padding: 2rem;
+    flex: 1;
+  
+    &__header {
+      margin-top: 35%;
+      text-align: center;
+  
+      &__text {
+        font-size: 2rem;
+        color: #004d40;
+      }
+    }
+  }
   .about__name__container {
     padding: 1rem;
+
+    p {
+      // background: #e0f2f1;
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 2.2vw;
+    }
   }
 
   .about__outside div {

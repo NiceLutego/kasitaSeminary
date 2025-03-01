@@ -19,11 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = $_POST['phone'];
     $message = $_POST['message'];
 
-    $stmt = $conn->prepare("INSERT INTO contact_messages (Full_Name, Email, Phone, Messages) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO contact_messages (Full_Name, email, phone, message) VALUES (?, ?, ?, ?)");
     $stmt->bind_param("ssss", $full_name, $email, $phone, $message);
 
     if ($stmt->execute()) {
-        echo "Message submitted successfully!";
+        header("location:contacts.php");
+        exit(0);
     } else {
         echo "Error: " . $stmt->error;
     }

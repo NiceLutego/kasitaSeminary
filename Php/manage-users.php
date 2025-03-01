@@ -27,9 +27,9 @@
             </header>
 
             <section class="user-list" style="display:flex;flex-direction:row;gap:3vw;align-items:center;justify-content:center;">
-                <button onclick="location.href='manage-staff.php'">Add Teachers</button>
-                <button onclick="location.href='manage-workers.php'">Add Workers</button>
-                <button onclick="location.href='manage-students.php'">Add Students</button>
+                <button onclick="location.href='manage-staff.php'" style="height:6vh;width:20vw;font-size:3vw;">Add Teachers</button>
+                <button onclick="location.href='manage-workers.php'" style="height:6vh;width:20vw;font-size:3vw;">Add Workers</button>
+                <button onclick="location.href='manage-students.php'" style="height:6vh;width:20vw;font-size:3vw;">Add Students</button>
             </section>
         </main>
     </div>

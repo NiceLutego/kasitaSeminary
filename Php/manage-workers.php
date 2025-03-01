@@ -21,6 +21,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post News - Kasita Seminary Admin</title>
     <link rel="stylesheet" href="../Styles/admins.css">
+    <style>
+        input{
+            width: 50%;
+        }
+        button{
+            width: 15%;
+        }
+
+        @media (max-width:768px){
+            
+        }
+    </style>
 </head>
 <body>
     <div class="admin-container">
@@ -43,7 +55,7 @@
             </header>
 
             <section class="user-form">
-                <form action="submit-workers.php" method="POST">
+                <form action="submit-workers.php" method="POST" style="display:flex;flex-direction:column;">
                     <label for="firstname">
                         First Name:
                     </label>
@@ -60,7 +72,7 @@
                     <label for="salary">Salary:</label>
                     <input type="text" name="salary" id="salary">
                     <br><br>
-                    <button type="submit" name="upload">Add Worker</button>
+                    <button type="submit" name="upload" style="height:6vh;width:20vw;font-size:3vw;">Add Worker</button>
                 </form>
             </section>
         </main>

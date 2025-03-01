@@ -32,6 +32,7 @@
                     <li><a href="manage-staff.php">Staff Management</a></li>
                     <li><a href="manage-workers.php">Workers Management</a></li>
                     <li><a href="manage-students.php">Students Management</a></li>
+                    <li><a href="manage_staff_profiles.php">Staff Profiles</a></li>
                     <li><a href="../Pages/index.html">Home</a></li>
                 </ul>
             </nav>
@@ -43,17 +44,21 @@
             </header>
 
             <section class="user-form">
-                <form action="submit-teachers.php" method="POST">
+                <form action="submit-teachers.php" method="POST" style="display:flex;flex-direction:column;">
                     <label for="teachername">
                         First Name:
                     </label>
+                    <br>
                     <input type="text" name="firstname" id="firstname" required>
+                    <br>
                     <label for="middlename">Middle Name:</label>
-                    <input type="text" name="middlename" id="middlename" required>
 
+                    <input type="text" name="middlename" id="middlename" required>
+                    <br>
                     <label for="lastname">Last Name:</label>
-                    <input name="lastname" id="lastname" required><br><br>
+                    <input name="lastname" id="lastname" required><br>
                     <label for="subject">Subject:</label>
+                
                     <select name="subject" id="subject">
                         <option value="English">English</option>
                         <option value="French">French</option>
@@ -68,12 +73,14 @@
                         <option value="Economics">Economics</option>
                         <option value="Business">Business</option>
                     </select>
+                    <br>
                     <label for="salary">Salary:</label>
                     <input type="text" name="salary" id="salary">
+                    <br>
                     <label for="phone">Phone:</label>
                     <input type="tel" name="phone" id="phone">
-                    <br><br><br>
-                    <button type="submit" name="upload">Add Teacher</button>
+                    <br><br>
+                    <button type="submit" name="upload" style="height:6vh;width:20vw;font-size:3vw;">Add Teacher</button>
                 </form>
             </section>
         </main>
