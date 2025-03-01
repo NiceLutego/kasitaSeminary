@@ -71,6 +71,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Students - Kasita Seminary Admin</title>
     <link rel="stylesheet" href="../Styles/admins.css">
+    <style>
+        input{
+            width: 70%;
+        }
+    </style>
 </head>
 <body>
     <div class="admin-container">
@@ -82,7 +87,7 @@
                     <li><a href="manage-staff.php">Staff Management</a></li>
                     <li><a href="manage-workers.php">Workers Management</a></li>
                     <li><a href="manage-students.php">Students Management</a></li>
-                    <li><a href="Student_results.php">Home</a></li>
+                    <li><a href="Student_results.php">Student Results</a></li>
                     <li><a href="../Pages/index.html">Home</a></li>
                 </ul>
             </nav>
@@ -100,7 +105,7 @@
                         <option value="science">Science</option>
                         <option value="arts">Arts</option>
                         <option value="business">Business</option>
-                    </select>
+                    </select><br>
                     <label for="form">Form:</label>
                     <select name="form" id="form">
                         <option value="form_one">Form One</option>
@@ -110,17 +115,18 @@
                         <option value="form_five">Form Five</option>
                         <option value="form_six">Form Six</option>
                     </select>
+                    <br>
                     <label for="firstname">First Name:</label>
-                    <input type="text" name="firstname" id="firstname" required>
+                    <input type="text" name="firstname" id="firstname" required><br>
                     <label for="middlename">Middle Name:</label>
-                    <input type="text" name="middlename" id="middlename" required>
+                    <input type="text" name="middlename" id="middlename" required><br>
                     <label for="lastname">Last Name:</label>
-                    <input name="lastname" id="lastname" required>
+                    <input name="lastname" id="lastname" required><br>
                     <label for="parentname">Parent Name:</label>
-                    <input type="text" name="parentname" id="parentname">
+                    <input type="text" name="parentname" id="parentname"><br>
                     <label for="phone">Phone:</label>
-                    <input type="tel" name="phone" id="phone">
-                    <button type="submit" name="upload" style="height:6vh;width:20vw;font-size:3vw;">Add Student</button>
+                    <input type="tel" name="phone" id="phone"><br><br>
+                    <button type="submit" name="upload" style="height:6vh;width:20vw;font-size:1.6vw;">Add Student</button>
                 </form>
             </section>
 

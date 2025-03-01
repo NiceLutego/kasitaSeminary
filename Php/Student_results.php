@@ -16,6 +16,8 @@
     // Handle student results submission
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_results'])) {
         $form = $_POST['form'] ?? '';
+        $month = $_POST['month'] ?? '';
+        $databaseName = $form . $month;
         $student_id = $_POST['student_id'] ?? '';
         $subjects = [
             'basic_math', 'chemistry', 'physics', 'biology', 'geography', 'computer_science',
@@ -31,47 +33,39 @@
         $sum = array_sum($scores);
         $average = $sum / count($subjects);
 
-        // Calculate division and points
-        $division = '';
-        $points = 0;
-
+        // Calculate grade
         if ($average >= 75) {
-            $division = 'Division I';
-            $points = 1;
-        } elseif ($average >= 60) {
-            $division = 'Division II';
-            $points = 2;
+            $grade = 'A';
+        } elseif ($average >= 65) {
+            $grade = 'B';
         } elseif ($average >= 45) {
-            $division = 'Division III';
-            $points = 3;
+            $grade = 'C';
         } elseif ($average >= 30) {
-            $division = 'Division IV';
-            $points = 4;
+            $grade = 'D';
         } else {
-            $division = 'Division 0';
-            $points = 5;
+            $grade = 'F';
         }
 
-        $sql = "INSERT INTO student_results (form, student_id, basic_math, chemistry, physics, biology, geography, computer_science, history, civics, tanzania_history, english, french, bible_knowledge, economics, kiswahili, divinity, advanced_math, general_studies, sum, average, division, points) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO $databaseName (student_id, basic_math, chemistry, physics, biology, geography, computer_science, history, civics, tanzania_history, english, french, bible_knowledge, economics, kiswahili, divinity, advanced_math, general_studies, total, average, grade) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-// Build the full array of parameters
-$params = array_merge(
-  [$form, $student_id], // Start with $form and $student_id
-  array_values($scores), // Add the unpacked values from $scores
-  [$sum, $average, $division, $points] // Add the other variables
-);
 
-// The format string (based on the number of params)
-$format = 's' . str_repeat('i', count($scores)) . 'idiis';
+        if ($stmt) {
+            // Build the full array of parameters
+            $params = array_merge([$student_id], array_values($scores), [$sum, $average, $grade]);
 
-// Pass the format string and unpacked parameters
-$stmt->bind_param($format, ...$params);
+            // The format string (based on the number of params)
+            $format = 'i' . str_repeat('i', count($scores)) . 'dds';
 
+            // Pass the format string and unpacked parameters
+            $stmt->bind_param($format, ...$params);
 
-        if ($stmt->execute()) {
-            echo "<p>Results added successfully!</p>";
+            if ($stmt->execute()) {
+                echo "<p>Results added successfully!</p>";
+            } else {
+                echo "<p>Error: " . $stmt->error . "</p>";
+            }
         } else {
-            echo "<p>Error: " . $stmt->error . "</p>";
+            echo "<p>SQL Error: " . $conn->error . "</p>";
         }
     }
 
@@ -84,7 +78,7 @@ $stmt->bind_param($format, ...$params);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Students - Kasita Seminary Admin</title>
+    <title>Manage Students Results - Kasita Seminary Admin</title>
     <link rel="stylesheet" href="../Styles/admins.css">
 </head>
 <body>
@@ -109,7 +103,7 @@ $stmt->bind_param($format, ...$params);
             </header>
 
             <section class="results-form">
-                <form action="" method="POST">
+                <form action="" method="POST" id="form">
                     <label for="form">Form:</label>
                     <select name="form" id="form">
                         <option value="form_one">Form One</option>
@@ -120,8 +114,17 @@ $stmt->bind_param($format, ...$params);
                         <option value="form_six">Form Six</option>
                     </select>
                     <label for="student_id">Student ID:</label>
-                    <input type="number" name="student_id" required>
-
+                    <input type="number" name="student_id" required><br>
+                    <label for="month">Month:</label>
+                    <select name="month" id="month" class="month">
+                        <option value="_terminal">Terminal 2025</option>
+                        <option value="_july">July 2025</option>
+                        <option value="_august">August 2025</option>
+                        <option value="_mid-term">Mid-term 2025</option>
+                        <option value="_october">October 2025</option>
+                        <option value="_november">November 2025</option>
+                        <option value="_annual">Annual</option>
+                    </select><br>
                     <?php
                         foreach ([
                             'Basic Mathematics', 'Chemistry', 'Physics', 'Biology', 'Geography', 'Computer Science',
@@ -130,7 +133,7 @@ $stmt->bind_param($format, ...$params);
                         ] as $subject) {
                             $field_name = strtolower(str_replace(' ', '_', $subject));
                             echo "<label for='$field_name'>$subject:</label>";
-                            echo "<input type='number' name='$field_name' min='0' max='100' required>";
+                            echo "<input type='number' name='$field_name' min='0' max='100'><br>";
                         }
                     ?>
                     <button type="submit" name="add_results">Add Results</button>

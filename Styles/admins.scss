@@ -104,7 +104,41 @@ body {
             }
         }
     }
+    .user-form{
+        label{
+            font-size: 3vw;
 
+            @media screen and (max-width:768px){
+                font-size: 3vw;
+            }
+        }
+        input{
+            height: 6vh;
+            font-size: 3vw;
+
+            @media screen and (max-width:768px){
+                display: flex;
+                flex-direction: column;
+                height: 6vh;
+                font-size: 3vw;
+                font-weight: 500;
+            }
+        }
+        button{
+            font-size: 1.6vw;
+
+            @media screen and (max-width:768px){
+                height: 6vh;
+                width: 20%;
+            }
+        }
+        select{
+            width: 70%;
+            height: 6vh;
+            font-size: 2.5vw;
+            font-weight: 500;
+        }
+    }
     .admin-actions {
         display: flex;
         justify-content: center;
@@ -130,12 +164,5 @@ body {
         }
     }
 }
-.user-form{
-    form{
-        
-        button{
-            width: 40%;
-        }
-    }
-}
+
 

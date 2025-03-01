@@ -23,11 +23,9 @@
     <link rel="stylesheet" href="../Styles/admins.css">
     <style>
         input{
-            width: 50%;
+            width: 70%;
         }
-        button{
-            width: 15%;
-        }
+
 
         @media (max-width:768px){
             
@@ -72,7 +70,7 @@
                     <label for="salary">Salary:</label>
                     <input type="text" name="salary" id="salary">
                     <br><br>
-                    <button type="submit" name="upload" style="height:6vh;width:20vw;font-size:3vw;">Add Worker</button>
+                    <button type="submit" name="upload" style="height:6vh;width:20vw;font-size:1.6vw;">Add Worker</button>
                 </form>
             </section>
         </main>

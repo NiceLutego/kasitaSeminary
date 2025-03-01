@@ -80,7 +80,7 @@
                     <label for="phone">Phone:</label>
                     <input type="tel" name="phone" id="phone">
                     <br><br>
-                    <button type="submit" name="upload" style="height:6vh;width:20vw;font-size:3vw;">Add Teacher</button>
+                    <button type="submit" name="upload" style="height:6vh;width:20vw;font-size:1.6vw;">Add Teacher</button>
                 </form>
             </section>
         </main>

@@ -89,6 +89,42 @@ body {
   font-weight: bold;
   color: #2c3e50;
 }
+.content .user-form label {
+  font-size: 3vw;
+}
+@media screen and (max-width: 768px) {
+  .content .user-form label {
+    font-size: 3vw;
+  }
+}
+.content .user-form input {
+  height: 6vh;
+  font-size: 3vw;
+}
+@media screen and (max-width: 768px) {
+  .content .user-form input {
+    display: flex;
+    flex-direction: column;
+    height: 6vh;
+    font-size: 3vw;
+    font-weight: 500;
+  }
+}
+.content .user-form button {
+  font-size: 1.6vw;
+}
+@media screen and (max-width: 768px) {
+  .content .user-form button {
+    height: 6vh;
+    width: 20%;
+  }
+}
+.content .user-form select {
+  width: 70%;
+  height: 6vh;
+  font-size: 2.5vw;
+  font-weight: 500;
+}
 .content .admin-actions {
   display: flex;
   justify-content: center;
@@ -111,8 +147,4 @@ body {
 }
 .content .admin-actions button:hover {
   background: #217dbb;
-}
-
-.user-form form button {
-  width: 40%;
 }/*# sourceMappingURL=admins.css.map */
