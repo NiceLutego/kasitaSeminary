@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #004d40;
+  background: rgb(21, 34, 78);
   padding: 1rem 2rem;
   color: #fff;
   width: 95%;
@@ -88,7 +88,7 @@ button:hover {
 .footer {
   text-align: center;
   padding: 1rem 1rem;
-  background: #004d40;
+  background: rgb(21, 34, 78);
   color: #fff;
   margin-top: auto;
   width: 100%;
@@ -119,6 +119,11 @@ button:hover {
   .header__nav__menu {
     flex-direction: column;
     align-items: center;
+    margin-right: 10%;
+  }
+  .header__nav__menu__item__link {
+    font-size: 3vw;
+    font-weight: 400;
   }
   .about__outside {
     margin-top: 30%;

@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f9;
+  background: rgb(237, 238, 240);
   color: #333;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #004d40;
+  background: rgb(21, 34, 78);
   padding: 1rem 2rem;
   color: #fff;
   width: 95%;
@@ -180,7 +180,7 @@ button:hover {
 .footer {
   text-align: center;
   padding: 1rem 1rem;
-  background: #004d40;
+  background: rgb(21, 34, 78);
   color: #fff;
   margin-top: auto;
   width: 100%;
@@ -211,12 +211,49 @@ button:hover {
   .header__nav__menu {
     flex-direction: column;
     align-items: center;
+    margin-right: 1.4rem;
+  }
+  .header__nav__menu__item__link {
+    font-size: 3vw;
+    font-weight: 400;
   }
   .about__name__division__1__name {
     margin-top: 33%;
   }
-  .about__outside div {
-    flex-direction: column;
+  .about__name__division__1__rows__1 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .about__name__division__1__rows__1__1, .about__name__division__1__rows__1__2 {
+    width: 100%;
+  }
+  .about__name__division__1__rows__1__1__layer h3, .about__name__division__1__rows__1__2__layer h3 {
+    font-size: 3.5vw;
+  }
+  .about__name__division__1__rows__1__1__layer p, .about__name__division__1__rows__1__2__layer p {
+    font-size: 3vw;
+    line-height: 4vh;
+    font-weight: 500;
+  }
+  .about__name__division__1__rows__2 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .about__name__division__1__rows__2__1, .about__name__division__1__rows__2__2 {
+    width: 100%;
+  }
+  .about__name__division__1__rows__2__1__layer h3, .about__name__division__1__rows__2__2__layer h3 {
+    font-size: 3.5vw;
+  }
+  .about__name__division__1__rows__2__1__layer p, .about__name__division__1__rows__2__2__layer p {
+    font-size: 3vw;
+    line-height: 4vh;
+    font-weight: 500;
   }
   .footer {
     padding: 1rem 0.5rem;

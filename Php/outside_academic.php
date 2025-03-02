@@ -28,7 +28,7 @@
             <a href="../Php/departments.php" class="header__nav__menu__item__link">Departments</a>
           </li>
           <li class="header__nav__menu__item">
-            <a href="../Php/contacs.php" class="header__nav__menu__item__link">Contacts</a>
+            <a href="../Php/contacts.php" class="header__nav__menu__item__link">Contacts</a>
           </li>
         </ul>
     </nav>

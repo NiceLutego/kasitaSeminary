@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f9;
+  background: rgb(237, 238, 240);
   color: #333;
   min-height: 100vh;
 }
@@ -14,13 +14,14 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: #004d40;
+  background: rgb(21, 34, 78);
   padding: 1rem 2rem;
   color: #fff;
   position: fixed;
   top: 0; /* Ensure the header is at the top */
   z-index: 2;
   width: 100%; /* Full-width */
+  overflow: hidden;
 }
 .header__nav__menu {
   display: flex;
@@ -29,15 +30,20 @@ body {
   gap: 3vw;
   margin-right: 25%;
 }
+.header__nav__menu__item {
+  font-size: 1.5vw;
+  font-weight: 500;
+}
 
 .home {
   text-align: center;
   margin-top: 8%;
-  padding: 4rem 2rem;
+  padding: 4rem 0.1rem;
   background: url("../Images/PXL_20250127_085141915.PORTRAIT.ORIGINAL.jpg") no-repeat center center/cover;
   color: #fff;
   position: relative;
   min-height: 100vh; /* Ensure home section fills screen */
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,7 +151,7 @@ a {
 .footer {
   text-align: center;
   padding: 1rem 1rem;
-  background: #004d40;
+  background: rgb(21, 34, 78);
   color: #fff;
   margin-top: auto;
   width: 100%;

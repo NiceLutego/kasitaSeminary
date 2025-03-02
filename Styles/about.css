@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #004d40;
+  background: rgb(21, 34, 78);
   padding: 1rem 2rem;
   color: #fff;
   width: 95%;
@@ -115,7 +115,7 @@ button:hover {
 .footer {
   text-align: center;
   padding: 1rem 1rem;
-  background: #004d40;
+  background: rgb(21, 34, 78);
   color: #fff;
   margin-top: auto;
   width: 100%;
@@ -149,7 +149,7 @@ button:hover {
     justify-content: center;
     width: 88%;
     align-items: center;
-    background-color: transparent;
+    background-color: rgb(21, 34, 78);
     right: 3%;
     left: 0;
   }
@@ -172,7 +172,7 @@ button:hover {
     top: 0.5rem;
     width: 28px;
     height: 3px;
-    background-color: #272727;
+    background-color: white;
     transition: all 0.5s ease-in-out;
     z-index: 2;
   }
@@ -182,7 +182,7 @@ button:hover {
     top: -8px;
     width: 28px;
     height: 3px;
-    background-color: #272727;
+    background-color: white;
     transition: all 0.5s ease-in-out;
   }
   .header__logo__burger::after {
@@ -191,7 +191,7 @@ button:hover {
     top: 8px;
     width: 28px;
     height: 3px;
-    background-color: #272727;
+    background-color: white;
     transition: all 0.5s ease-in-out;
   }
   .header__logo__burger.open {
@@ -226,7 +226,7 @@ button:hover {
     height: 100vh;
     gap: 0.3vh;
     overflow: hidden;
-    background-color: #2c3e50;
+    background-color: rgb(21, 34, 78);
     list-style-type: none;
     padding-right: 1rem;
     transform: translateY(-100%);
@@ -300,6 +300,7 @@ button:hover {
   }
   .footer {
     padding: 1rem 0.5rem;
+    background-color: rgb(21, 34, 78);
   }
   .footer .footer__links {
     flex-direction: column;

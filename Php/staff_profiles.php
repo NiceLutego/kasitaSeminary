@@ -55,22 +55,6 @@ $departments = $conn->query("SELECT * FROM departments");
         </ul>
     </nav>
   </div>
-  
-<!-- <div class="nav">
-    <a href="../Pages/index.html">Home</a>
-    <a href="../Php/about.php">About</a>
-    <a href="../Php/staff_profiles.php">staff</a>
-    <a href="../Pages/login.html">Administration</a>
-    <a href="departments.php">Departments
-        <div class="dropdown">
-            <?php while ($department = $departments->fetch_assoc()): ?>
-                <a href="departments.php?id=<?= $department['id'] ?>"><?= htmlspecialchars($department['department_name']) ?></a>
-            <?php endwhile; ?>
-        </div>
-    </a>
-    <a href="../Php/contacts.php">Contacts</a>
-</div> -->
-
 <div class="container">
     <?php while ($admin = $admins->fetch_assoc()): ?>
         <div class="profile <?= $admin['position_order'] === 'Rector' ? 'Rector' : '' ?>">

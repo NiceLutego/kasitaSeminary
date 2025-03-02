@@ -17,7 +17,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: #004d40;
+  background: rgb(21, 34, 78);
   padding: 1rem 2rem;
   color: #fff;
   position: fixed;
@@ -46,6 +46,13 @@ body {
   flex-direction: column; 
   align-items: center; 
   padding: 20px; 
+
+  @media screen and (max-width:768px){
+    margin-top: 10%;
+    .Rector{
+      margin-top: 8%;
+    }
+  }
 }
 .profile { 
   width: 100%; 
@@ -118,7 +125,7 @@ body {
 .footer {
 text-align: center;
 padding: 1rem 1rem;
-background: #004d40;
+background: rgb(21, 34, 78);
 color: #fff;
 margin-top: auto;
 width: 100%;
@@ -155,7 +162,7 @@ margin: 0;
     justify-content: center;
     width: 88%;
     align-items: center;
-    // background-color: transparent;
+    background-color: rgb(21, 34, 78);
     right: 3%;
     left: 0;
 
@@ -164,7 +171,7 @@ margin: 0;
       align-items: right;
       position: absolute;
       z-index: 3;
-      right: 1rem;
+      right: 1.5rem;
       top: 1rem;
       height: 20px;
       width: 28px;
@@ -178,7 +185,7 @@ margin: 0;
         top: 0.5rem;
         width: 28px;
         height: 3px;
-        background-color: $burger-color;
+        background-color: white;
         @include transition-ease;
         z-index: 2;
 
@@ -188,7 +195,7 @@ margin: 0;
           top: -8px;
           width: 28px;
           height: 3px;
-          background-color: $burger-color;
+          background-color: white;
           @include transition-ease;
         }
 
@@ -198,7 +205,7 @@ margin: 0;
           top: 8px;
           width: 28px;
           height: 3px;
-          background-color: $burger-color;
+          background-color: white;
           @include transition-ease;
         }
 

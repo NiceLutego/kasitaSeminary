@@ -57,7 +57,7 @@ $media = $conn->query($query);
     <a href="staff_profiles.php">Staff Profiles</a>
     <a href="login.php">Administration</a>
     <a href="departments.php">Staff Profiles</a>
-    <a href="contact.php">Contact Us</a>
+    <a href="contacts.php">Contact Us</a>
 </nav>
 
 <div class="container">
