@@ -14,9 +14,11 @@ body {
     color: #2E2E2E;
     text-align: center;
     min-height: 100vh;
+    text-decoration: none;
   }
   
   .main-header {
+    margin-top: 10%;
     background-color: $primary-color;
     padding: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -46,7 +48,20 @@ body {
   
       &__item{
         font-size: 1.5vw;
+        text-decoration: none;
         font-weight: 500;
+
+        &__link{
+          text-decoration: none;
+          font-size: 2vw;
+          color: white;
+          transition: color 0.5s ease;
+
+          &:hover{
+            color: $accent-color;
+            transition: all ease-in-out 0.5s;
+          }
+        }
       }
     }
   }  
@@ -105,6 +120,10 @@ body {
   .contacts__footer__container__column {
     flex: 1;
     padding: 1rem;
+
+    ul{
+      list-style-type: none;
+    }
   }
   
   .contacts__footer__container__column h3 {
@@ -180,6 +199,7 @@ body {
               height: 3px;
               background-color: white;
               @include transition-ease;
+              transform: translateX(-50%);
             }
     
             &::after{
@@ -190,6 +210,7 @@ body {
               height: 3px;
               background-color: white;
               @include transition-ease;
+              transform: translateX(-50%);
             }
     
             &.open{
@@ -242,9 +263,14 @@ body {
     
             &__item{
               transform: translateX(100vw);
+              text-decoration: none;
               @include transition-ease;
               &.open{
                 transform: translateX(0);
+              }
+              &__link{
+                color: white;
+                font-weight: 500;
               }
     
               &.active > a {

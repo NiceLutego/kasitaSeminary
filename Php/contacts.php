@@ -29,6 +29,7 @@
           <li class="header__nav__menu__item">
             <a href="../Php/departments.php" class="header__nav__menu__item__link">Departments</a>
           </li>
+          <li class="header__nav__menu__item"><a href="../Php/photo_gallery.php">Photo Gallery</a></li>
           <li class="header__nav__menu__item">
             <a href="../Php/contacts.php" class="header__nav__menu__item__link">Contacts</a>
           </li>

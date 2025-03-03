@@ -175,7 +175,7 @@ body{
     // justify-content: center;
     width: 100%;
     align-items: center;
-    background-color: transparent;
+    background-color: rgb(21, 34, 78);
 
     &__logo{
       display: block;
@@ -196,7 +196,7 @@ body{
         top: 0.5rem;
         width: 28px;
         height: 3px;
-        background-color: $burger-color;
+        background-color: white;
         @include transition-ease;
         z-index: 2;
 
@@ -207,7 +207,7 @@ body{
           width: 28px;
           height: 3px;
           transform: translateX(-14px);
-          background-color: $burger-color;
+          background-color: white;
           @include transition-ease;
         }
 
@@ -218,7 +218,7 @@ body{
           width: 28px;
           height: 3px;
           transform: translateX(-14px);
-          background-color: $burger-color;
+          background-color: white;
           @include transition-ease;
         }
 
@@ -260,7 +260,7 @@ body{
         height: 100vh;
         gap: 0.5vh;
         overflow: hidden;
-        background-color: $primary-color;
+        background-color: rgb(21, 34, 78);
         list-style-type: none;
         padding-right: 1rem;
         transform: translateY(-100%);

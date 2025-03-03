@@ -30,6 +30,7 @@
           <li class="header__nav__menu__item">
             <a href="../Php/departments.php" class="header__nav__menu__item__link">Departments</a>
           </li>
+          <li class="header__nav__menu__item"><a href="../Php/photo_gallery.php">Photo Gallery</a></li>
           <li class="header__nav__menu__item">
             <a href="../Php/contacts.php" class="header__nav__menu__item__link">Contacts</a>
           </li>
@@ -137,6 +138,7 @@
     <a href="../Php/about.php">About</a>
     <a href="../Pages/login.html">Administration</a>
     <a href="../Php/departments.php">Departments</a>
+    <a href="../Php/photo_gallery.php">Photo Gallery</a>
     <a href="../Php/contacts.php">Contact</a>
   </div>
   <p>&copy; 2025 Kasita Minor Seminary. All Rights Reserved.</p>

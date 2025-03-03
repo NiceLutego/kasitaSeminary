@@ -5,9 +5,11 @@ body {
   color: #2E2E2E;
   text-align: center;
   min-height: 100vh;
+  text-decoration: none;
 }
 
 .main-header {
+  margin-top: 10%;
   background-color: #FFD700;
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -39,7 +41,18 @@ body {
 }
 .header__nav__menu__item {
   font-size: 1.5vw;
+  text-decoration: none;
   font-weight: 500;
+}
+.header__nav__menu__item__link {
+  text-decoration: none;
+  font-size: 2vw;
+  color: white;
+  transition: color 0.5s ease;
+}
+.header__nav__menu__item__link:hover {
+  color: #4CAF50;
+  transition: all ease-in-out 0.5s;
 }
 
 .form-section, .contact-section {
@@ -102,6 +115,9 @@ body {
 .contacts__footer__container__column {
   flex: 1;
   padding: 1rem;
+}
+.contacts__footer__container__column ul {
+  list-style-type: none;
 }
 
 .contacts__footer__container__column h3 {
@@ -174,6 +190,7 @@ body {
     height: 3px;
     background-color: white;
     transition: all 0.5s ease-in-out;
+    transform: translateX(-50%);
   }
   .header__logo__burger::after {
     content: "";
@@ -183,6 +200,7 @@ body {
     height: 3px;
     background-color: white;
     transition: all 0.5s ease-in-out;
+    transform: translateX(-50%);
   }
   .header__logo__burger.open {
     transform: rotate(720deg);
@@ -227,10 +245,15 @@ body {
   }
   .header__nav__menu__item {
     transform: translateX(100vw);
+    text-decoration: none;
     transition: all 0.5s ease-in-out;
   }
   .header__nav__menu__item.open {
     transform: translateX(0);
+  }
+  .header__nav__menu__item__link {
+    color: white;
+    font-weight: 500;
   }
   .header__nav__menu__item.active > a {
     color: #2E2E2E;
