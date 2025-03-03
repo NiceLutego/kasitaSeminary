@@ -1,10 +1,32 @@
 <?php
-    // Database Connection
-    $pdo = new PDO('mysql:host=localhost;dbname=Kasita_Seminary', 'root', '');
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // Database configuration
+    $host = 'localhost';
+    $username = 'root';
+    $password = '';
+    $dbname = 'kasita_seminary';
 
+    // Create connection
+    $conn = new mysqli($host, $username, $password, $dbname);
+     // Handle student deletion
+     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['remove'])) {
+        $filename = $_POST['filename'] ?? '';
+        $filePath = $_POST['filePath'] ?? '';
+        if (!empty($filename) && ! empty($filePath)) {
+            $sql = "DELETE FROM media WHERE id = ?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param('i',$filePath);
+
+            if ($stmt->execute()) {
+                echo "<p>Student removed successfully!</p>";
+            } else {
+                echo "<p>Error: " . $stmt->error . "</p>";
+            }
+        } else {
+            
+        }
+    }
       // Fetch Media
-    $media = $pdo->query('SELECT * FROM media')->fetchAll(PDO::FETCH_ASSOC);
+    $result = $conn ->query('SELECT * FROM media');
 ?>
 
 <!DOCTYPE html>
@@ -39,10 +61,16 @@
                 <h1 style="text-align:center;font-weight:600;">Welcome Admin-manage your media here</h1>
                 <h2>Existing Media Files</h2>
                 <ul>
+                <?php while ($row = $result->fetch_assoc()): ?>
                     <li>  
-                    <img src="<?php echo htmlspecialchars($item['file_path'])?>"><button>Delete</button></li>
-                    <!-- <li><img src="media/img2.jpg" alt="Media 2"><button>Delete</button></li> -->
-                    <!-- Add more media files here -->
+                        <?php echo $row['file_path'];?>&nbsp;&nbsp;&nbsp;
+                        <form action="" method="" style="display:inline">
+                            <input type="hidden" name="filename" value="<?php echo $row['id']; ?>">
+                            <input type="hidden" name="filePath" value="<?php echo $row['file_path']; ?>">
+                            <button type="submit" value="Delete" name="remove">Delete</button>
+                        </form>
+                    </li>
+                    <?php endwhile; ?>
                 </ul>
                 <button type="button" onclick="location.href='upload-media.php'">Upload News</button>
             </section>

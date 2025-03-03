@@ -1,3 +1,20 @@
+<?php
+    // Database configuration
+    $host = 'localhost';
+    $username = 'root';
+    $password = '';
+    $dbname = 'kasita_seminary';
+
+    // Create connection
+    $conn = new mysqli($host, $username, $password, $dbname);
+    
+    //fetch news
+    $result = $conn ->query('SELECT * FROM new_post');
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,9 +45,9 @@
             <div class="notice-bord">
                 <h2>School Notice Board</h2>
                 <ul>
-                    <li><i>August 8, 2024:</i> Workers day - National Republic holiday <span class="new-text">New</span></li>
-                    <li><i>August 15, 2024:</i> Science fair showcasing innovative student projects <span class="new-text">New</span></li>
-                    <li><i>October 14, 2024:</i> Talent show including dance, music, and drama performances <span class="new-text">New</span></li>
+                <?php while ($row = $result->fetch_assoc()): ?>
+                    <li><i><?php echo $row['event_date'];?>:</i><?php echo $row['title'];?>.<?php echo $row['content'];?>.<span class="new-text">New</span></li>
+                    <?php endwhile; ?>
                 </ul>
             </div>
             <div class="event-card">

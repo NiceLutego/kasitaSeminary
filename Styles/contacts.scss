@@ -81,7 +81,7 @@ ul {
 .header {
   background-color: rgb(21, 34, 78);
   color: white;
-  padding: 2rem 2rem;
+  padding: 3rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -325,7 +325,7 @@ button[type="submit"]:hover {
         height: 100vh;
         gap: 0.3vh;
         overflow: hidden;
-        background-color: $primary-color;
+        background-color: rgb(21, 34, 78);
         list-style-type: none;
         padding-right: 1rem;
         transform: translateY(-100%);
@@ -369,16 +369,6 @@ button[type="submit"]:hover {
       transition-delay: ($i *0.1s) + 0.15s;
     }
   } 
-
-  // .header__nav ul {
-  //   flex-direction: column;
-  //   align-items: center;
-  // }
-
-  // .header__nav__menu__item {
-  //   margin: 10px 0;
-  // }
-
   .contacts__footer__container {
     flex-direction: column;
     align-items: center;

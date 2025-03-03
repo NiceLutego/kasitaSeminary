@@ -137,7 +137,7 @@ p {
     justify-content: center;
     width: 100%;
     align-items: center;
-    background-color: transparent;
+    background-color: rgb(21, 34, 78);
 
     &__logo{
       display: block;
@@ -158,7 +158,7 @@ p {
         top: 0.5rem;
         width: 28px;
         height: 3px;
-        background-color: $burger-color;
+        background-color: white;
         @include transition-ease;
         z-index: 2;
 
@@ -168,7 +168,7 @@ p {
           top: -8px;
           width: 28px;
           height: 3px;
-          background-color: $burger-color;
+          background-color: white;
           @include transition-ease;
         }
 
@@ -178,7 +178,7 @@ p {
           top: 8px;
           width: 28px;
           height: 3px;
-          background-color: $burger-color;
+          background-color: white;
           @include transition-ease;
         }
 
@@ -220,7 +220,7 @@ p {
         height: 100vh;
         gap: 0.5vh;
         overflow: hidden;
-        background-color: $primary-color;
+        background-color: rgb(21, 34, 78);
         list-style-type: none;
         padding-right: 1rem;
         transform: translateY(-100%);
