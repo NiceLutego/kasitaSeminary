@@ -357,22 +357,25 @@ p {
     color: #1abc9c;
   }
   .header__nav__menu__item:nth-child(1) {
-    transition-delay: 0.25s;
-  }
-  .header__nav__menu__item:nth-child(2) {
     transition-delay: 0.35s;
   }
-  .header__nav__menu__item:nth-child(3) {
-    transition-delay: 0.45s;
-  }
-  .header__nav__menu__item:nth-child(4) {
+  .header__nav__menu__item:nth-child(2) {
     transition-delay: 0.55s;
   }
+  .header__nav__menu__item:nth-child(3) {
+    transition-delay: 0.75s;
+  }
+  .header__nav__menu__item:nth-child(4) {
+    transition-delay: 0.95s;
+  }
   .header__nav__menu__item:nth-child(5) {
-    transition-delay: 0.65s;
+    transition-delay: 1.15s;
   }
   .header__nav__menu__item:nth-child(6) {
-    transition-delay: 0.75s;
+    transition-delay: 1.35s;
+  }
+  .header__nav__menu__item:nth-child(7) {
+    transition-delay: 1.55s;
   }
   .home__1 {
     margin-top: 20%;

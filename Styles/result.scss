@@ -85,7 +85,13 @@ body {
     font-size: 1rem;
     color: #2E2E2E;
   }
-  .form-section form button, .contact-section form button, .admin-login form button {
+  .form-section select{
+    height: 7vh;
+    border-radius: 10px;
+    font-size: 1.4vw;
+    font-weight: 500;
+  }
+  .form-section form button, .contact-section form button{
     padding: 1rem;
     border: none;
     border-radius: 10px;
@@ -94,7 +100,7 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
   }
-  .form-section form button:hover, .contact-section form button:hover, .admin-login form button:hover {
+  .form-section form button:hover, .contact-section form button:hover {
     background-color: #3d8b40;
   }
   
@@ -300,6 +306,11 @@ body {
           transition-delay: ($i *0.1s) + 0.15s;
         }
       } 
+    .form-section select{
+      height: 7vh;
+      font-weight: 500;
+      font-size: 2.4vw;
+    }
     
     .contacts__footer__container {
         flex-direction: column;

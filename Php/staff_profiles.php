@@ -50,6 +50,8 @@ $departments = $conn->query("SELECT * FROM departments");
             </a>
           </li>
           <li class="header__nav__menu__item">
+          <a href="../Php/photo_gallery.php" class="header__nav__menu__item__link">Photo Gallery</a></li>
+          <li class="header__nav__menu__item">
             <a href="../Php/contacts.php" class="header__nav__menu__item__link">Contacts</a>
           </li>
         </ul>

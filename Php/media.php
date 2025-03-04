@@ -25,40 +25,38 @@ $media = $conn->query($query);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kasita Seminary News</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; box-sizing: border-box; }
-        nav { background: #007bff; color: white; padding: 10px 0; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-        .container { display: flex; flex-direction: column; align-items: center; padding: 10px; }
-        .search-bar { margin-bottom: 20px; }
-        .search-bar input[type="text"] { padding: 8px; width: 80%; max-width: 400px; border-radius: 5px; border: 1px solid #ccc; }
-        .search-bar button { padding: 8px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
-        .search-bar button:hover { background: #0056b3; }
-        .media-item { width: 100%; max-width: 600px; background: #f9f9f9; margin-bottom: 20px; padding: 10px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); }
-        .media-item img, .media-item video { width: 100%; border-radius: 10px; }
-        .media-title { font-size: 1.5rem; font-weight: bold; margin: 10px 0; }
-        .media-description { margin-bottom: 10px; }
-        .comments-section { margin-top: 20px; }
-        .comment { background: #fff; padding: 8px; margin-top: 5px; border-radius: 5px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); }
-        form { display: flex; flex-direction: column; }
-        input[type="text"] { padding: 8px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; }
-        button { padding: 8px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 5px; }
-        button:hover { background: #0056b3; }
-        footer { background: #007bff; color: white; text-align: center; padding: 10px 0; margin-top: 20px; }
-    </style>
+    <link rel="stylesheet" href="../Styles/media.css">
 </head>
 <body>
 
-<nav>
-    <a href="../Pages/index.html">Home</a>
-    <a href="about.php">About</a>
-    <a href="staff_profiles.php">Staff Profiles</a>
-    <a href="login.php">Administration</a>
-    <a href="departments.php">Staff Profiles</a>
-    <a href="contacts.php">Contact Us</a>
-</nav>
+<div class="header">
+    <div class="header__logo">
+     <span class="header__logo__burger"></span>
+    </div>
+    <nav class="header__nav">
+        <ul class="header__nav__menu">
+          <li class="header__nav__menu__item">
+            <a href="index.html" class="header__nav__menu__item__link">Home</a>
+          </li>
+          <li class="header__nav__menu__item">
+            <a href="../Php/about.php" class="header__nav__menu__item__link">About</a>
+          </li>
+          <li class="header__nav__menu__item">
+            <a href="../Php/staff_profiles.php" class="header__nav__menu__item__link">Staff</a>
+          </li>
+          <li class="header__nav__menu__item">
+            <a href="../Pages/login.html" class="header__nav__menu__item__link">Administration</a>
+          </li>
+          <li class="header__nav__menu__item">
+            <a href="../Php/departments.php" class="header__nav__menu__item__link">Departments</a>
+          </li>
+          <li class="header__nav__menu__item"><a href="../Php/photo_gallery.php">Photo Gallery</a></li>
+          <li class="header__nav__menu__item">
+            <a href="../Php/contacts.php" class="header__nav__menu__item__link">Contacts</a>
+          </li>
+        </ul>
+    </nav>
+  </div>
 
 <div class="container">
     <form class="search-bar" method="GET" action="">
@@ -104,6 +102,6 @@ $media = $conn->query($query);
 </footer>
 
 <?php $conn->close(); ?>
-
+<script src="../js/main.js"></script>
 </body>
 </html>

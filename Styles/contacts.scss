@@ -363,7 +363,7 @@ button[type="submit"]:hover {
     }
   }
 
-  @for $i from 1 through 6{
+  @for $i from 1 through 7{
 
     .header__nav__menu__item:nth-child(#{$i}){
       transition-delay: ($i *0.1s) + 0.15s;

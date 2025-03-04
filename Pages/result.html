@@ -41,9 +41,20 @@
         <h2>Check Student Results</h2>
         <form action="../Php/result.php" method="post">
             <input type="text" name="student_number" placeholder="Enter Student Number" required>
-            <input type="text" name="form" id="form" placeholder="Which Form?">
-            <input type="text" name="year" placeholder="Year">
-            <input type="text" name="month" placeholder="Month">
+            <select name="form" id="form">
+              <option value="form_one" selected>Form One</option>
+              <option value="form_two">Form Two</option>
+              <option value="form_three">Form Three</option>
+              <option value="form_four">Form Four</option>
+              <option value="form_five">Form Five</option>
+              <option value="form_six">Form six</option>
+            </select>
+            <select name="results" id="results">
+              <option value="_terminal" selected>Terminal</option>
+              <option value="_july">July</option>
+              <option value="_august">August</option>
+              <option value="_mid-term">Mid-Term</option>
+            </select>
             <button type="submit">Check Results</button>
         </form>
     </section>
