@@ -10,6 +10,7 @@
     
     //fetch news
     $result = $conn ->query('SELECT * FROM new_post');
+    $output = $conn ->query('SELECT * FROM events');
 
 
 ?>
@@ -30,7 +31,7 @@
     </div>
     <nav class="header__nav" id="nav-menu">
         <ul class="header__nav__menu">
-            <li class="header__nav__menu__item"><a href="../Pages/index.html" class="header__nav__menu__item__link">Home</a></li>
+            <li class="header__nav__menu__item"><a href="../Pages/index.php" class="header__nav__menu__item__link">Home</a></li>
             <li class="header__nav__menu__item"><a href="../Php/about.php" class="header__nav__menu__item__link">About</a></li>
             <li class="header__nav__menu__item"><a href="../Php/staff_profiles.php" class="header__nav__menu__item__link">Staff</a></li>
             <li class="header__nav__menu__item"><a href="../Pages/login.html" class="header__nav__menu__item__link">Administration</a></li>
@@ -53,17 +54,19 @@
             <div class="event-card">
                   <h2 class="event-heading">Upcoming Events</h2>
                   <div class="event-details">
+                    <?php while ($row = $output->fetch_assoc()): ?>
                       <div class="event">
-                          <h3>Parents' Day.</h3>
-                          <p>Date: August 31, 2025</p>
-                          <p>Time: 9:00 AM - 12:00 PM</p>
-                          <p>Location: School Main Hall</p>
+                          <h3><?php echo $row['title'];?></h3>
+                          <p>Date: <?php echo $row['event_date'];?></p>
+                          <p>Time:  <?php echo $row['start_time'];?> -  <?php echo $row['finish_time'];?></p>
+                          <p>Location:  <?php echo $row['location'];?></p>
                           <p>
                             <strong>Description:</strong> 
-                            This day the parents of the kasita seminary seminarians will be having the meeting with the school adminstration.
+                            <?php echo $row['description'];?>
                             </p>
                       </div>
-                      <div class="event">
+                      <?php endwhile; ?>
+                      <!-- <div class="event">
                           <h3>English Reinforcement.</h3>
                           <p>Date: october 04, 2025</p>
                           <p>Time: 9:00 AM - 12:00 PM</p>
@@ -83,7 +86,7 @@
                                 <strong>Description:</strong> 
                                 This day will comprise two events which is remembering mwl.Julius Kambarage Nyerere and talents will be shown by the students.
                             </p>
-                      </div>
+                      </div> -->
                   </div>
               </div>
     </section>

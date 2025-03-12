@@ -31,6 +31,9 @@
             <a href="../Php/departments.php" class="header__nav__menu__item__link">Departments</a>
           </li>
           <li class="header__nav__menu__item">
+            <a href="../Php/photo_gallery.php" class="header__nav__menu__item__link">Photos</a>
+          </li>
+          <li class="header__nav__menu__item">
             <a href="../Php/contacs.php" class="header__nav__menu__item__link">Contacts</a>
           </li>
         </ul>
@@ -60,7 +63,7 @@
           </div>
         </div>
       </div>
-      <button type="button" onclick="location.href='../Php/outside_academic.php'">See More</button>
+      <button type="button" onclick="location.href='../Php/outside_academic.php'" class="seebtn">See More</button>
   <footer class="footer">
   <div class="footer__links">
     <a href="../Pages/index.html">Home</a>

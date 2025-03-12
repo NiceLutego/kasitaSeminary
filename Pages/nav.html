@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website with Dropdown Navbar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #004080;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      height: 30vh;
+      border: 2px red solid;
+    }
+
+    .nav-item {
+      position: relative;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .nav-item:hover {
+      background-color: #0059b3;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #0059b3;
+      min-width: 150px;
+      z-index: 6;
+      height: 20%;
+    }
+
+    .dropdown a {
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown a:hover {
+      background-color: #0073e6;
+    }
+
+    .nav-item:hover .dropdown {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="nav-item">Home</div>
+    <div class="nav-item">About
+      <div class="dropdown">
+        <a href="#">Our Story</a>
+        <a href="#">Mission</a>
+        <a href="#">Vision</a>
+      </div>
+    </div>
+    <div class="nav-item">Academics
+      <div class="dropdown">
+        <a href="#">Programs</a>
+        <a href="#">Departments</a>
+        <a href="#">Faculty</a>
+      </div>
+    </div>
+    <div class="nav-item">Contact
+      <div class="dropdown">
+        <a href="#">Email Us</a>
+        <a href="#">Location</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -28,6 +28,9 @@
             <a href="../Php/departments.php" class="header__nav__menu__item__link">Departments</a>
           </li>
           <li class="header__nav__menu__item">
+            <a href="../Php/photo_gallery.php" class="header__nav__menu__item__link">Photos</a>
+          </li>
+          <li class="header__nav__menu__item">
             <a href="../Php/contacs.php" class="header__nav__menu__item__link">Contacts</a>
           </li>
         </ul>
@@ -43,7 +46,7 @@
               <div class="about__name__division__1__rows__1__1__layer">
                 <h3>Form One</h3>
                 <p>
-                Meet our cherished Form One students at Kasita Seminary. This vibrant class consists of 44 students, each embarking on their educational journey with dedication and enthusiasm. Among them, students pursue a variety of academic disciplines, including Pure Science, Social Science, Fine Arts, and Amali, laying a strong foundation for both their academic and personal growth.
+                Meet our cherished Form One students at Kasita Seminary. This vibrant class consists of 52 students, each embarking on their educational journey with dedication and enthusiasm. Among them, students pursue a variety of academic disciplines, including Pure Science, Social Science, Fine Arts, and Amali, laying a strong foundation for both their academic and personal growth.
                 </p>
               </div>
             </div>
@@ -51,7 +54,7 @@
               <div class="about__name__division__1__rows__1__2__layer">
                 <h3>Form Two</h3>
                 <p>
-                Here are our dearly cherished Form Two candidates of 2025. This class of 45 students has been entrusted with the honor of representing Kasita Seminary in the 2025 FTNA examinations. With their hard work and dedication, we are confident they will uphold the seminary’s tradition of excellence.
+                Here are our dearly cherished Form Two candidates of 2025. This class of 44 students has been entrusted with the honor of representing Kasita Seminary in the 2025 FTNA examinations. With their hard work and dedication, we are confident they will uphold the seminary’s tradition of excellence.
                 </p>
               </div>
             </div>
@@ -75,7 +78,7 @@
             </div>
           </div>
         </div>
-        <button type="button" onclick="location.href='../Php/advanced_level.php'">See More</button>
+        <button type="button" onclick="location.href='../Php/advanced_level.php'" class="seebtn">See More</button>
   <footer class="footer">
   <div class="footer__links">
     <a href="../Pages/index.html">Home</a>

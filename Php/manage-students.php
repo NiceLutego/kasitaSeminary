@@ -89,6 +89,7 @@
                     <li><a href="manage-students.php">Students Management</a></li>
                     <li><a href="Student_results.php">Student Results</a></li>
                     <li><a href="manage-departments.php">Departments</a></li>
+                    <li><a href="../Php/manage_photo.php">Photos Management</a></li>
                     <li><a href="../Pages/index.html">Home</a></li>
                 </ul>
             </nav>
@@ -100,7 +101,7 @@
             </header>
 
             <section class="user-form">
-                <form action="" method="POST" style="display:flex;flex-direction:column;">
+                <form action="" method="POST" style="display:flex;flex-direction:column;" enctype="multipart/form-data">
                     <label for="class">Class:</label>
                     <select name="class" id="class">
                         <option value="science">Science</option>

@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   $allowedImageTypes = ['image/jpeg', 'image/png', 'image/gif'];
 
-  $maxFileSize = 5 * 1024 * 1024; // 5MB
+  $maxFileSize = 20 * 1024 * 1024; // 20MB
 
   if ($photo['error'] === UPLOAD_ERR_OK) {
     $fileMimeType = mime_content_type($photo['tmp_name']);
@@ -86,6 +86,8 @@ $conn->close();
                     <li><a href="manage-workers.php">Workers Management</a></li>
                     <li><a href="manage-students.php">Students Management</a></li>
                     <li><a href="manage-departments.php">Departments</a></li>
+                    <li><a href="../Php/getMessages.php">Message Management</a></li>
+                    <li><a href="../Php/manage_photo.php">Photos Management</a></li>
                     <li><a href="../Pages/index.html">Home</a></li>
                 </ul>
             </nav>
@@ -101,12 +103,12 @@ $conn->close();
                     <label for="firstname">
                         First Name:
                     </label>
-                    <input type="text" name="firstname" id="firstname" required>
+                    <input type="text" name="firstname" id="firstname" required><br>
                     <label for="middlename">Middle Name:</label>
-                    <input type="text" name="middlename" id="middlename" required>
+                    <input type="text" name="middlename" id="middlename" required><br>
 
                     <label for="lastname">Last Name:</label>
-                    <input name="lastname" id="lastname" required><br><br><br>
+                    <input name="lastname" id="lastname" required><br><br>
                     <label for="Position">Position:</label>
                     <select name="position" id="position">
                       <option value="Rector">Fr Rector</option>
@@ -117,9 +119,9 @@ $conn->close();
                       <option value="frater">Frater</option>
                       <option value="academic-master">Academic Master</option>
                       <option value="teacher">Teacher</option>
-                    </select>
+                    </select><br>
                     <label for="photo">Photo:</label>
-                    <input type="file" name="photo" id="photo">
+                    <input type="file" name="photo" id="photo"><br>
                     <label for="bio">Bio:</label>
                     <input type="text" name="bio" id="bio"><br><br>
                     <button type="submit" name="upload">Add Individual</button>

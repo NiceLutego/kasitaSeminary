@@ -16,7 +16,7 @@
     <nav class="header__nav">
         <ul class="header__nav__menu">
           <li class="header__nav__menu__item">
-            <a href="../Pages/index.html" class="header__nav__menu__item__link">Home</a>
+            <a href="../Pages/index.php" class="header__nav__menu__item__link">Home</a>
           </li>
           <li class="header__nav__menu__item">
             <a href="../Php/about.php" class="header__nav__menu__item__link">About</a>
@@ -55,7 +55,7 @@
             
           </span>
       </div>
-      <button type="button" onclick="location.href='../Php/ordinary_level.php'">See More</button>
+      <button type="button" onclick="location.href='../Php/ordinary_level.php'" class="seebtn">See More</button>
     </div>
 <footer class="footer">
   <div class="footer__links">

@@ -116,7 +116,6 @@ $secondary-color: #1abc9c;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
 h3 {
   font-size: 1.5rem;
   color: #2c3e50;
@@ -258,10 +257,10 @@ p {
     }
   }
 
-  @for $i from 1 through 6{
+  @for $i from 1 through 8{
 
     .header__nav__menu__item:nth-child(#{$i}){
-      transition-delay: ($i *0.1s) + 0.15s;
+      transition-delay: ($i *0.2s) + 0.15s;
     }
   } 
 
@@ -287,6 +286,7 @@ p {
   .department__rows__5__1, .department__rows__5__2 {
     width: 90%;
     margin-bottom: 20px;
+
   }
 
   h3 {
@@ -296,7 +296,7 @@ p {
 
   p {
     font-size: 1.2rem;
-    color: #2c3e50;
+    color: teal;
   }
 
   .footer {
@@ -305,6 +305,9 @@ p {
     .footer__links {
       flex-direction: column;
       gap: 0.5rem;
+    }
+    p{
+      color: rgb(237, 238, 240);
     }
   }
 

@@ -225,22 +225,28 @@ p {
     color: #1abc9c;
   }
   .header__nav__menu__item:nth-child(1) {
-    transition-delay: 0.25s;
-  }
-  .header__nav__menu__item:nth-child(2) {
     transition-delay: 0.35s;
   }
-  .header__nav__menu__item:nth-child(3) {
-    transition-delay: 0.45s;
-  }
-  .header__nav__menu__item:nth-child(4) {
+  .header__nav__menu__item:nth-child(2) {
     transition-delay: 0.55s;
   }
+  .header__nav__menu__item:nth-child(3) {
+    transition-delay: 0.75s;
+  }
+  .header__nav__menu__item:nth-child(4) {
+    transition-delay: 0.95s;
+  }
   .header__nav__menu__item:nth-child(5) {
-    transition-delay: 0.65s;
+    transition-delay: 1.15s;
   }
   .header__nav__menu__item:nth-child(6) {
-    transition-delay: 0.75s;
+    transition-delay: 1.35s;
+  }
+  .header__nav__menu__item:nth-child(7) {
+    transition-delay: 1.55s;
+  }
+  .header__nav__menu__item:nth-child(8) {
+    transition-delay: 1.75s;
   }
   .department {
     flex-direction: column;
@@ -268,7 +274,7 @@ p {
   }
   p {
     font-size: 1.2rem;
-    color: #2c3e50;
+    color: teal;
   }
   .footer {
     padding: 1rem 0.5rem;
@@ -276,5 +282,8 @@ p {
   .footer .footer__links {
     flex-direction: column;
     gap: 0.5rem;
+  }
+  .footer p {
+    color: rgb(237, 238, 240);
   }
 }/*# sourceMappingURL=departments.css.map */

@@ -41,7 +41,7 @@ $departments = $conn->query("SELECT * FROM departments");
             <a href="../Pages/login.html" class="header__nav__menu__item__link">Administration</a>
           </li>
           <li class="header__nav__menu__item">
-            <a href="../Php/departments.php" class="header__nav__menu__item__link">Departments
+            <a href="" class="header__nav__menu__item__link">Departments
             <div class="dropdown">
             <?php while ($department = $departments->fetch_assoc()): ?>
                 <a href="departments.php?id=<?= $department['id'] ?>"><?= htmlspecialchars($department['department_name']) ?></a>
@@ -50,7 +50,7 @@ $departments = $conn->query("SELECT * FROM departments");
             </a>
           </li>
           <li class="header__nav__menu__item">
-          <a href="../Php/photo_gallery.php" class="header__nav__menu__item__link">Photo Gallery</a></li>
+          <a href="../Php/photo_gallery.php" class="header__nav__menu__item__link">Photos</a></li>
           <li class="header__nav__menu__item">
             <a href="../Php/contacts.php" class="header__nav__menu__item__link">Contacts</a>
           </li>

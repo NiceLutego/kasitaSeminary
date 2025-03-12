@@ -287,6 +287,12 @@ button:hover {
     font-size: 2rem;
     color: #004d40;
   }
+  .seebtn {
+    width: 70%;
+    transform: translateX(-50%);
+    font-size: 4.5vw;
+    font-weight: 600;
+  }
   .about__name__container {
     padding: 1rem;
   }
@@ -294,9 +300,6 @@ button:hover {
     padding: 1rem;
     border-radius: 8px;
     font-size: 2.2vw;
-  }
-  .about__outside div {
-    flex-direction: column;
   }
   .footer {
     padding: 1rem 0.5rem;

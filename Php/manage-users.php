@@ -22,6 +22,8 @@
                     <li><a href="manage-workers.php">Workers Management</a></li>
                     <li><a href="manage-students.php">Students Management</a></li>
                     <li><a href="manage-departments.php">Departments</a></li>
+                    <li><a href="../Php/getMessages.php">Message Management</a></li>
+                    <li><a href="manage_photo.php">Photo Management</a></li>
                     <li><a href="../Pages/index.html">Home</a></li>
                 </ul>
             </nav>

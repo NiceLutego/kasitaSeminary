@@ -366,7 +366,7 @@ button[type="submit"]:hover {
   @for $i from 1 through 7{
 
     .header__nav__menu__item:nth-child(#{$i}){
-      transition-delay: ($i *0.1s) + 0.15s;
+      transition-delay: ($i *0.2s) + 0.15s;
     }
   } 
   .contacts__footer__container {

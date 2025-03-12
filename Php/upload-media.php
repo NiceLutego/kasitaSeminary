@@ -1,8 +1,11 @@
 <?php
-    // Database Connection
-    ob_start();
-    $pdo = new PDO('mysql:host=localhost;dbname=Kasita_Seminary', 'root', '');
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// Connect to the database
+ob_start();
+$conn = new mysqli('localhost', 'root', '', 'kasita_seminary');
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +26,10 @@
                     <li><a href="manage-media.php">Manage Media</a></li>
                     <li><a href="post-news.php">Post News</a></li>
                     <li><a href="manage-users.php">User Management</a></li>
+                    <li><a href="../Php/departments.php">Departments</a></li>
+                    <li><a href="../Php/getMessages.php">Message Managements</a></li>
+                    <li><a href="../Php/manage_photo.php">Photos Managements</a></li>
+                    <li><a href="../Php/manage_events.php">Events Managements</a></li>
                     <li><a href="../Pages/index.html">Home</a></li>
                 </ul>
             </nav>
@@ -36,16 +43,16 @@
             <section class="media-actions">
             <form action="" method="POST" enctype="multipart/form-data">
                 <label>Title:</label>
-                <input type="text" name="title" required>
+                <input type="text" name="title" required><br><br>
                 <label>Type:</label>
                 <select name="type" required>
                     <option value="image">Image</option>
                     <option value="video">Video</option>
-                </select>
+                </select><br><br>
                 <label>File:</label>
-                <input type="file" name="file" required>
+                <input type="file" name="file" required><br><br>
                 <label for="description">Description:</label>
-                <input type="text" name="description" id="description">
+                <input type="text" name="description" id="description"><br><br>
                 <button type="submit" name="upload" style="margin-left:40%;margin-top:2%;width:30%;font-size:1.6vw;">Upload</button>
             </form>
     <?php
@@ -54,10 +61,11 @@
         $title = $_POST['title'];
         $type = $_POST['type'];
         $file = $_FILES['file'];
+        $description = $_POST['description'];
 
         $allowedImageTypes = ['image/jpeg', 'image/png', 'image/gif'];
         $allowedVideoTypes = ['video/mp4', 'video/webm', 'video/ogg'];
-        $maxFileSize = 5 * 1024 * 1024; // 5MB
+        $maxFileSize = 20 * 1024 * 1024; // 20MB
 
         if ($file['error'] === UPLOAD_ERR_OK) {
             $fileMimeType = mime_content_type($file['tmp_name']);
@@ -74,8 +82,8 @@
                     $filePath = $targetDir . basename($file['name']);
 
                     if (move_uploaded_file($file['tmp_name'], $filePath)) {
-                        $stmt = $pdo->prepare('INSERT INTO media (title, type, file_path) VALUES (?, ?, ?)');
-                        $stmt->execute([$title, $type, $filePath]);
+                        $stmt = $conn->prepare('INSERT INTO media (title, type, file_path,description) VALUES (?, ?, ?,?)');
+                        $stmt->execute([$title, $type, $filePath,$description]);
                         echo "<p style='color:green;'>File uploaded successfully!</p>";
                     } else {
                         echo "<p style='color:red;'>File upload failed!</p>";

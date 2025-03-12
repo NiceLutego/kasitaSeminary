@@ -48,6 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <li><a href="post-news.php">Post News</a></li>
                     <li><a href="manage-users.php">User Management</a></li>
                     <li><a href="manage-departments.php">Departments</a></li>
+                    <li><a href="../Php/getMessages.php">Message Management</a></li>
+                    <li><a href="../Php/manage_photo.php">Photos Management</a></li>
                     <li><a href="../Pages/index.html">Home</a></li>
                 </ul>
             </nav>

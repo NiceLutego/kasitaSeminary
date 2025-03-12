@@ -36,7 +36,7 @@ $media = $conn->query($query);
     <nav class="header__nav">
         <ul class="header__nav__menu">
           <li class="header__nav__menu__item">
-            <a href="index.html" class="header__nav__menu__item__link">Home</a>
+            <a href="../Pages/index.html" class="header__nav__menu__item__link">Home</a>
           </li>
           <li class="header__nav__menu__item">
             <a href="../Php/about.php" class="header__nav__menu__item__link">About</a>
@@ -50,7 +50,7 @@ $media = $conn->query($query);
           <li class="header__nav__menu__item">
             <a href="../Php/departments.php" class="header__nav__menu__item__link">Departments</a>
           </li>
-          <li class="header__nav__menu__item"><a href="../Php/photo_gallery.php">Photo Gallery</a></li>
+          <li class="header__nav__menu__item"><a href="../Php/photo_gallery.php" class="header__nav__menu__item__link">Photos</a></li>
           <li class="header__nav__menu__item">
             <a href="../Php/contacts.php" class="header__nav__menu__item__link">Contacts</a>
           </li>
@@ -97,9 +97,40 @@ $media = $conn->query($query);
     <?php endif; ?>
 </div>
 
-<footer>
-    &copy; <?= date('Y') ?> Kasita Minor Seminary. All rights reserved.
-</footer>
+<div class="contacts__footer">
+    <div class="contacts__footer__container">
+      <div class="contacts__footer__container__column">
+        <h3>About Us</h3>
+        <p>St.Francis Junior Seminary-Kasita</p>
+        <p>P.O.Box 103</p>
+        <p>Ulanga,Morogoro,Tanzania</p>
+        <p>Email: kasitajuniorseminary@gmail.com</p>
+        <p>Phone: +255784397424</p>
+      </div>
+      <div class="contacts__footer__container__column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../Pages/index.html">Home</a></li>
+          <li><a href="../Php/about.php">About</a></li>
+          <li><a href="../Php/services.php">Services</a></li>
+          <li><a href="../Pages/login.html">Administration</a></li>
+          <li><a href="../Php/privacy-plicy.php">Privacy and Policies</a></li>
+        </ul>
+      </div>
+      <div class="contacts__footer__container__column">
+        <h3>Follow Us</h3>
+        <a href="#">Facebook</a>
+        <a href="#"> YouTube</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">X</a>
+      </div>
+    </div>
+    <p class="contacts__footer__button">
+      &copy; 2025 Kasita Seminary. All rights reserved.
+    </p>
+  </div>
+
 
 <?php $conn->close(); ?>
 <script src="../js/main.js"></script>

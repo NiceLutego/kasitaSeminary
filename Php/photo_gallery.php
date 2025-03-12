@@ -19,16 +19,33 @@
     <link rel="stylesheet" href="../Styles/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="../Pages/index.html">Home</a></li>
-                <li><a href="../Php/about.php">About Us</a></li>
-                <li><a href="../Php/staff_profiles.php">Staff</a></li>
-                <li><a href="../Php/school-calender.php">School Calendar</a></li>
-                <li><a href="../Php/photo_gallery.php">Photo Gallery</a></li>
-                <li><a href="../Php/contacts.php">Contact</a></li>
-            </ul>
+  <header class="header">
+  <div class="header__logo">
+     <span class="header__logo__burger"></span>
+    </div>
+    <nav class="header__nav">
+        <ul class="header__nav__menu">
+          <li class="header__nav__menu__item">
+            <a href="../Pages/index.html" class="header__nav__menu__item__link">Home</a>
+          </li>
+          <li class="header__nav__menu__item">
+            <a href="../Php/about.php" class="header__nav__menu__item__link">About</a>
+          </li>
+          <li class="header__nav__menu__item">
+            <a href="../Php/staff_profiles.php" class="header__nav__menu__item__link">Staff</a>
+          </li>
+          <li class="header__nav__menu__item">
+            <a href="../Pages/login.html" class="header__nav__menu__item__link">Administration</a>
+          </li>
+          <li class="header__nav__menu__item">
+            <a href="../Php/departments.php" class="header__nav__menu__item__link">Departments</a>
+          </li>
+          <li class="header__nav__menu__item">
+            <a href="../Php/photo_gallery.php" class="header__nav__menu__item__link">Photos</a></li>
+          <li class="header__nav__menu__item">
+            <a href="../Php/contacts.php" class="header__nav__menu__item__link">Contacts</a>
+          </li>
+        </ul>
         </nav>
     </header>
 
@@ -53,6 +70,7 @@
     <footer>
         <p>&copy; 2025 Kasita Minor Seminary. All Rights Reserved.</p>
     </footer>
+    <script src="../js/main.js"></script>
 </body>
 </html>
 <?php

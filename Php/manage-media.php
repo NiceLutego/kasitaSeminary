@@ -7,26 +7,29 @@
 
     // Create connection
     $conn = new mysqli($host, $username, $password, $dbname);
-     // Handle student deletion
-     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['remove'])) {
-        $filename = $_POST['filename'] ?? '';
-        $filePath = $_POST['filePath'] ?? '';
-        if (!empty($filename) && ! empty($filePath)) {
-            $sql = "DELETE FROM media WHERE id = ?";
-            $stmt = $conn->prepare($sql);
-            $stmt->bind_param('i',$filePath);
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Handle media deletion
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['remove'])) {
+        $file_id = $_POST['id'] ?? '';
+
+        if (!empty($file_id)) {
+            $stmt = $conn->prepare("DELETE FROM media WHERE id = ?");
+            $stmt->bind_param('i', $file_id);
 
             if ($stmt->execute()) {
-                echo "<p>Student removed successfully!</p>";
+                echo "<p>Media removed successfully!</p>";
             } else {
                 echo "<p>Error: " . $stmt->error . "</p>";
             }
-        } else {
-            
         }
     }
-      // Fetch Media
-    $result = $conn ->query('SELECT * FROM media');
+
+    // Fetch media
+    $result = $conn->query('SELECT * FROM media');
 ?>
 
 <!DOCTYPE html>
@@ -49,6 +52,7 @@
                     <li><a href="manage-users.php">User Management</a></li>
                     <li><a href="manage-departments.php">Departments</a></li>
                     <li><a href="../Php/getMessages.php">Message Management</a></li>
+                    <li><a href="../Php/manage_photo.php">Photos Management</a></li>
                     <li><a href="../Pages/index.html">Home</a></li>
                 </ul>
             </nav>
@@ -60,21 +64,20 @@
             </header>
 
             <section class="media-actions">
-                <h1 style="text-align:center;font-weight:600;">Welcome Admin-manage your media here</h1>
+                <h1 style="text-align:center;font-weight:600;">Welcome Admin - Manage your media here</h1>
                 <h2>Existing Media Files</h2>
                 <ul>
                 <?php while ($row = $result->fetch_assoc()): ?>
                     <li>  
-                        <?php echo $row['file_path'];?>&nbsp;&nbsp;&nbsp;
-                        <form action="" method="" style="display:inline">
-                            <input type="hidden" name="filename" value="<?php echo $row['id']; ?>">
-                            <input type="hidden" name="filePath" value="<?php echo $row['file_path']; ?>">
+                        <?= htmlspecialchars($row['file_path']); ?>&nbsp;&nbsp;&nbsp;
+                        <form action="" method="POST" style="display:inline" onsubmit="return confirm('Are you sure you want to delete this media file?');">
+                            <input type="hidden" name="id" value="<?= htmlspecialchars($row['id']); ?>">
                             <button type="submit" value="Delete" name="remove">Delete</button>
                         </form>
                     </li>
-                    <?php endwhile; ?>
+                <?php endwhile; ?>
                 </ul>
-                <button type="button" onclick="location.href='upload-media.php'">Upload News</button>
+                <button type="button" onclick="location.href='upload-media.php'">Upload Media</button>
             </section>
         </main>
     </div>

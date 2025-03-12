@@ -15,7 +15,7 @@
     <nav class="header__nav">
         <ul class="header__nav__menu">
           <li class="header__nav__menu__item">
-            <a href="../Pages/index.html" class="header__nav__menu__item__link">Home</a>
+            <a href="../Pages/index.php" class="header__nav__menu__item__link">Home</a>
           </li>
           <li class="header__nav__menu__item">
             <a href="../Php/about.php" class="header__nav__menu__item__link">About</a>
@@ -30,7 +30,7 @@
             <a href="../Php/departments.php" class="header__nav__menu__item__link">Departments</a>
           </li>
           <li class="header__nav__menu__item">
-            <a href="../Php/photo_gallery.php" class="header__nav__menu__item__link">Photo Gallery</a></li>
+            <a href="../Php/photo_gallery.php" class="header__nav__menu__item__link">Photos</a></li>
           <li class="header__nav__menu__item">
             <a href="../Php/contacts.php" class="header__nav__menu__item__link">Contacts</a>
           </li>
@@ -73,6 +73,7 @@
       <div class="contacts__footer__container__column">
         <h3>About Us</h3>
         <p>St.Francis Junior Seminary-Kasita</p>
+        <p>P.O.Box 103</p>
         <p>Ulanga,Morogoro,Tanzania</p>
         <p>Email: kasitajuniorseminary@gmail.com</p>
         <p>Phone: +255784397424</p>

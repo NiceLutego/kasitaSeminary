@@ -12,6 +12,48 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
+
+    // Check if form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['upload'])) {
+    // Get form input
+    $fname = $_POST['firstname'];
+    $mname = $_POST['middlename'];
+    $lname = $_POST['lastname'];
+    $subject = $_POST['subject'];
+    $phone = $_POST['phone'];
+    $salary = $_POST['salary'];
+
+    // Prepare SQL query to insert teacher data
+    $sql = "INSERT INTO staff (first_name, middle_name, last_name,subject,salary, phone) VALUES ('$fname', '$mname', '$lname', '$subject','$salary','$phone')";
+
+    // Check if the query was successful
+    if ($conn->query($sql) === TRUE) {
+        echo "<p style='color:green;'>Teacher submitted successful!</p>";
+    } else {
+        echo "<p style='color:red;'>Teacher submission failed!</p>";
+    }
+}
+// Handle worker deletion
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['remove'])) {
+    $fname = $_POST['name'] ?? '';
+    $teacher_id = $_POST['teacher_id'] ?? '';
+
+    if (!empty($fname) && !empty($teacher_id)) {
+        $sql = "DELETE FROM workers WHERE id = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param('i', $teacher_id);
+
+        if ($stmt->execute()) {
+            echo "<p style='color:green;'>Teacher removed successfully!</p>";
+        } else {
+            echo "<p style='color:red;'>Teacher removal failed!</p>";
+        }
+    } else {
+        echo "<p style='color:red;'>There is no Teacher to delete</p>";
+    }
+}
+
+$result = $conn ->query('SELECT * FROM staff');
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +76,7 @@
                     <li><a href="manage-students.php">Students Management</a></li>
                     <li><a href="manage_staff_profiles.php">Staff Profiles</a></li>
                     <li><a href="manage-departments.php">Departments</a></li>
+                    <li><a href="../Php/manage_photo.php">Photos Management</a></li>
                     <li><a href="../Pages/index.html">Home</a></li>
                 </ul>
             </nav>
@@ -45,7 +88,7 @@
             </header>
 
             <section class="user-form">
-                <form action="submit-teachers.php" method="POST" style="display:flex;flex-direction:column;">
+                <form action="" method="POST" style="display:flex;flex-direction:column;" enctype="multipart/form-data">
                     <label for="teachername">
                         First Name:
                     </label>
@@ -84,7 +127,40 @@
                     <button type="submit" name="upload" style="height:6vh;width:20vw;font-size:1.6vw;">Add Teacher</button>
                 </form>
             </section>
+
+            <section class="teachers-list">
+                <h2>Registered Teachers</h2>
+                <table border="1">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Middle Name</th>
+                        <th>Last Name</th>
+                        <th>Phone</th>
+                        <th>Action</th>
+                    </tr>
+                    <?php while ($row = $result->fetch_assoc()): ?>
+                        <tr>
+                            <td><?php echo $row['first_name']; ?></td>
+                            <td><?php echo $row['middle_name']; ?></td>
+                            <td><?php echo $row['last_name']; ?></td>
+                            <td><?php echo $row['phone']; ?></td>
+                            <td>
+                                <form action="" method="POST" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this Teacher?')">
+                                    <input type="hidden" name="name" value="<?php echo $fname; ?>">
+                                    <input type="hidden" name="teacher_id" value="<?php echo $row['id']; ?>">
+                                    <button type="submit" name="remove">Remove Worker</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <?php endwhile; ?>
+                </table>
+            </section>
         </main>
     </div>
 </body>
 </html>
+
+
+<?php
+$conn ->close();
+?>

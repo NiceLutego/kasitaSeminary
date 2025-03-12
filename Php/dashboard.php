@@ -28,12 +28,15 @@
             <h2>Admin Panel</h2>
             <nav>
                 <ul>
-                    <li><a href="dashboard.php">Dashboard</a></li>
-                    <li><a href="manage-media.php">Manage Media</a></li>
-                    <li><a href="post-news.php">Post News</a></li>
-                    <li><a href="manage-users.php">User Management</a></li>
-                    <li><a href="manage-departments.php">Departments</a></li>
+                    <li><a href="../Php/dashboard.php">Dashboard</a></li>
+                    <li><a href="../Php/create_admin.php">Account Management</a></li>
+                    <li><a href="../Php/manage-media.php">Manage Media</a></li>
+                    <li><a href="../Php/post-news.php">Post News</a></li>
+                    <li><a href="../Php/manage-users.php">User Management</a></li>
+                    <li><a href="../Php/manage-departments.php">Departments</a></li>
                     <li><a href="../Php/getMessages.php">Message Management</a></li>
+                    <li><a href="../Php/manage_photo.php">Photos Management</a></li>
+                    <li><a href="../Php/manage_events.php">Events Management</a></li>
                     <li><a href="../Pages/index.html">Home</a></li>
                 </ul>
             </nav>
