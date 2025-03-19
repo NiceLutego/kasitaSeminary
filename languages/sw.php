@@ -32,12 +32,21 @@ $lang = array(
     "Notice board"=>"Ubao wa matangazo",
     "View news"=>"Tazama habari",
     "View results"=>"Tazama matokeo",
-    "Latest announcements"=>"Matangazo ya hivi karibuni"
-    
-
-
-
-
-
+    "Latest announcements"=>"Matangazo ya hivi karibuni",
+    "The opening of Kasita Seminary in 1950 should never be considered the birth of the idea of establishing a seminary as a school to prepare young men who would become priests in the future. The idea of having local priests had been in the minds of missionaries since they began preaching the Gospel in the vicariate of Dar es Salaam."=>"Kufunguliwa kwa seminari ya Kasita katika mwaka wa 1950, kamwe kusifikiriwe kuwa ndiyo kuzaliwa kwa wazo la kuanzisha seminari kama shule ya kuwaandaa vijana watakaokuwa mapadre siku za usoni. Wazo la kuwa na mapadre wazalendo lilikuwepo akilini mwa wamisionari tangu walipoanza kuhubiri Injili katika jimbo la Dar es Salaam.",
+    "The Capuchin missionaries arrived in Tanzania in 1921, taking over from the German Benedictines who left in 1917 after their defeat in the First World War against the British."=>"Wamisionari Wakapuchini waliingia Tanzania mwaka 1921, wakichukua nafasi ya Wabenedictini wa Kijerumani ambao waliondoka mwaka 1917 baada ya kushindwa katika Vita ya Kwanza ya Dunia dhidi ya Waingereza.",
+    "From the beginning, the missionaries saw the importance of having local priests, as it was the only way to root the church deeply in this country. In 1927, in Sali, they gathered a few young men and prepared them for seminary training. After one or two years, this group of young men joined the students of the Kwiro Central School. There, they were carefully evaluated to see if they were suitable for priestly training and were also taught Latin at that time."=>"Tangu mwanzo, wamisionari waliona umuhimu wa kuwa na mapadre wazalendo, kwani ilikuwa njia pekee ya kulifanya kanisa liote mizizi katika nchi hii. Mnamo mwaka 1927, huko Sali, waliwakusanya vijana wachache na kuwaandaa kwa malezi ya seminari. Baada ya mwaka mmoja au miwili, kundi hili la vijana liliungana na wanafunzi wa Shule ya Kati ya Kwiro. Huko walichunguzwa kwa makini ili kuona kama walifaa kwa mafunzo ya kipadre na pia walifundishwa Kilatini wakati huo.",
+    "They emphasized that, under no circumstances, should the priestly training given to local priests be of lower quality but should be equal to that offered to priests in Europe. As a result, they were able to obtain the first local priests: Father Elias Mchonde and Father Gregory Mpanda, who were ordained at the Church of Christ the King, Kwiro, on August 28, 1949."=>"Waliweka msisitizo kwamba, kwa hali yoyote ile, mafunzo ya upadre kwa mapadre wazalendo yasipungue ubora, bali yawe sawa na yale yanayotolewa kwa mapadre wa Ulaya. Matokeo yake, waliweza kupata mapadre wa kwanza wazalendo: Padre Elias Mchonde na Padre Gregory Mpanda, ambao walipewa daraja takatifu la upadre katika Kanisa la Yesu Mfalme, Kwiro, tarehe 28 Agosti 1949.",
+    "Father Elias Mchonde was born in the Mahenge district, and Father Gregory Mpanda was born in Kipatimu, in the Dar es Salaam diocese, which was then known as the 'Apostolic Vicariate of Dar es Salaam.' Mahenge was part of that diocese."=>"Padre Elias Mchonde alikuwa mzaliwa wa wilaya ya Mahenge, na Padre Gregory Mpanda alikuwa mzaliwa wa Kipatimu, jimbo la Dar es Salaam, ambalo wakati huo lilijulikana kama 'Apostolic Vicariate of Dar es Salaam'. Mahenge ilikuwa sehemu ya jimbo hilo.",
+    ""=>"Padre Gerard aliona furaha ya pekee kumpata padre wa kwanza mwananchi wa wilaya ya Mahenge, ambaye ni matokeo ya juhudi zake kubwa zisizopimika. Hayo yanadhihirika katika mojawapo ya mashairi aliyoyaandika wakati wa maisha yake.",
+    ""=>"'Hatimaye sasa unasimama hapa
+penye madhabahu baada ya miaka mingi ya taabu,
+kama padre kijana, ndugu yangu Mwafrika,
+uliyejitokeza miongoni mwa wapagani.'",
+""=>"Hakika maneno hayo yaliamsha tulizo kubwa sana moyoni mwake, kwani baada ya miaka 20 ya majaribio aliweza kumwona mwanafunzi wake wa kwanza akipewa daraja takatifu la upadre. Ndoto yake ilianza kutimia. Hivyo alitumaini kuwa shamba la Kasita lingekuwa na rutuba zaidi kwa kuwaandaa vijana wanaopenda kuwa mapadre.",
+""=>"Ujenzi wa seminari na upanuzi wa shule
+Wakati wa Padre Gerard, Padre Elias Mchonde na mwalimu mmoja wa daraja la kwanza walipohamia Kasita kuanzisha seminari, hapakuwa na jengo lolote linalostahili kuitwa shule. Walikuta nyumba iliyojulikana kama 'Kuesterhaus'. Hii ilikuwa ni nyumba ya mkaazi wa kijerumani aliyeitwa Kuester. Katika nyumba hiyo, Padre Gerard alipata chumba kimoja kama ofisi, kingine cha kulala, na cha tatu kilitumika kama kanisa.",
+""=>"Wanafunzi wapatao sitini walipata ghala la huyo mkaazi, ambalo baadaye lilijengwa kuwa kanisa la Kasita.",
+""=>"Bruda Benno alijaribu kubadilisha ghala hilo kuwa makazi yanayoweza kukaliwa. Baada ya ukarabati, kulikuwa na chumba cha kufulia, jiko, ghala, vyumba viwili vya kulala, na ukumbi wa chakula."
 );
 ?>

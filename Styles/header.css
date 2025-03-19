@@ -15,7 +15,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: rgb(21, 34, 78);
   padding: 15px 30px;
   position: sticky;
   top: 0;
@@ -60,15 +60,18 @@ nav .logo a {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #333;
-  min-width: 160px;
+  background-color: rgb(21, 34, 78);
+  min-width: 80vw;
   z-index: 1;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  transform: translateX(-40%);
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
 }
 
 .dropdown-content li {

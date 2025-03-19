@@ -48,51 +48,6 @@ ul {
   list-style-type: none;
 }
 
-/* Header */
-.header {
-  background-color: rgb(21, 34, 78);
-  color: white;
-  padding: 3rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 20vh;
-}
-
-.header__logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.header__logo__burger {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin-top: 6px;
-  position: relative;
-}
-
-.header__nav ul {
-  display: flex;
-}
-
-.header__nav__menu__item {
-  margin-left: 20px;
-}
-
-.header__nav__menu__item__link {
-  color: white;
-  font-size: 2vw;
-  padding: 10px;
-  transition: background-color 0.3s ease;
-}
-
-.header__nav__menu__item__link:hover {
-  background-color: #575757;
-  border-radius: 10px;
-}
-
 /* Contacts Section */
 .contacts {
   padding: 3rem;
@@ -203,141 +158,6 @@ button[type=submit]:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .header {
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    align-items: center;
-    background-color: rgb(21, 34, 78);
-    right: 0;
-    left: 0;
-  }
-  .header__logo {
-    display: block;
-    align-items: right;
-    position: absolute;
-    z-index: 3;
-    right: 1rem;
-    top: 1rem;
-    height: 20px;
-    width: 28px;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-  }
-  .header__logo__burger {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0.5rem;
-    width: 28px;
-    height: 3px;
-    background-color: white;
-    transition: all 0.5s ease-in-out;
-    z-index: 2;
-  }
-  .header__logo__burger::before {
-    content: "";
-    position: absolute;
-    top: -8px;
-    width: 28px;
-    height: 3px;
-    background-color: white;
-    transition: all 0.5s ease-in-out;
-  }
-  .header__logo__burger::after {
-    content: "";
-    position: absolute;
-    top: 8px;
-    width: 28px;
-    height: 3px;
-    background-color: white;
-    transition: all 0.5s ease-in-out;
-  }
-  .header__logo__burger.open {
-    transform: rotate(720deg);
-    background: transparent;
-  }
-  .header__logo__burger.open::before {
-    transform: rotate(45deg) translate(5px, 8px);
-  }
-  .header__logo__burger.open::after {
-    width: 28px;
-    transform: rotate(-45deg) translate(3px, -7px);
-  }
-  .header__nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    opacity: 0.98;
-    visibility: hidden;
-  }
-  .header__nav.open {
-    visibility: visible;
-  }
-  .header__nav__menu {
-    margin-left: 30%;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: right;
-    width: 70vw;
-    height: 100vh;
-    gap: 0.3vh;
-    overflow: hidden;
-    background-color: rgb(21, 34, 78);
-    list-style-type: none;
-    padding-right: 1rem;
-    transform: translateY(-100%);
-    transition: all 0.5s ease-in-out;
-  }
-  .header__nav__menu.open {
-    transform: translateY(0);
-  }
-  .header__nav__menu__item {
-    transform: translateX(100vw);
-    transition: all 0.5s ease-in-out;
-  }
-  .header__nav__menu__item.open {
-    transform: translateX(0);
-  }
-  .header__nav__menu__item.active > a {
-    color: #1abc9c;
-  }
-  .header__nav__menu__item__link {
-    width: auto;
-    display: inline-block;
-    font-size: 1rem;
-    text-transform: uppercase;
-    padding: 0.9rem 0;
-    font-weight: 600;
-    transition: all 0.5s ease-in-out;
-  }
-  .header__nav__menu__item__link:hover {
-    color: #1abc9c;
-  }
-  .header__nav__menu__item:nth-child(1) {
-    transition-delay: 0.35s;
-  }
-  .header__nav__menu__item:nth-child(2) {
-    transition-delay: 0.55s;
-  }
-  .header__nav__menu__item:nth-child(3) {
-    transition-delay: 0.75s;
-  }
-  .header__nav__menu__item:nth-child(4) {
-    transition-delay: 0.95s;
-  }
-  .header__nav__menu__item:nth-child(5) {
-    transition-delay: 1.15s;
-  }
-  .header__nav__menu__item:nth-child(6) {
-    transition-delay: 1.35s;
-  }
-  .header__nav__menu__item:nth-child(7) {
-    transition-delay: 1.55s;
-  }
   .contacts__footer__container {
     flex-direction: column;
     align-items: center;
@@ -365,6 +185,7 @@ body {
 
 .main-content {
   flex-grow: 1;
+  margin-top: 3rem;
 }
 
 /* Footer Styles */

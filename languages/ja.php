@@ -55,6 +55,11 @@ $lang =array(
   "Notice board"=>"掲示板",
   "View news"=>"ニュースを見る",
   "View results"=>"結果を見る",
-  "Latest announcements"=>"最新のお知らせ"
+  "Latest announcements"=>"最新のお知らせ",
+  "The opening of Kasita Seminary in 1950 should never be considered the birth of the idea of establishing a seminary as a school to prepare young men who would become priests in the future. The idea of having local priests had been in the minds of missionaries since they began preaching the Gospel in the vicariate of Dar es Salaam."=>"1950年のカシタ神学校の開校は、将来司祭になる若者を育成する学校として神学校を設立するという考えの誕生とは決して見なされるべきではありません。地元出身の司祭を持つという考えは、宣教師たちがダルエスサラーム教区で福音を宣べ伝え始めたときから彼らの心にありました。",
+  "The Capuchin missionaries arrived in Tanzania in 1921, taking over from the German Benedictines who left in 1917 after their defeat in the First World War against the British."=>"カプチン会の宣教師たちは1921年にタンザニアに到着し、1917年にイギリスとの第一次世界大戦で敗北した後に去ったドイツのベネディクト会士たちの後を引き継ぎました。",
+  "From the beginning, the missionaries saw the importance of having local priests, as it was the only way to root the church deeply in this country. In 1927, in Sali, they gathered a few young men and prepared them for seminary training. After one or two years, this group of young men joined the students of the Kwiro Central School. There, they were carefully evaluated to see if they were suitable for priestly training and were also taught Latin at that time."=>"宣教師たちは最初から、地域の司祭を育てることの重要性を認識していました。これは、この国に教会の根を深く張る唯一の方法でした。1927年、サリで数人の若者を集め、神学校の訓練の準備をしました。1年か2年後、この若者たちはクウィロ中央学校の生徒たちと合流しました。そこで彼らは、司祭の訓練に適しているかどうかを慎重に審査され、同時にラテン語も学びました。",
+  "They emphasized that, under no circumstances, should the priestly training given to local priests be of lower quality but should be equal to that offered to priests in Europe. As a result, they were able to obtain the first local priests: Father Elias Mchonde and Father Gregory Mpanda, who were ordained at the Church of Christ the King, Kwiro, on August 28, 1949."=>"彼らは、地域の司祭に与えられる訓練は決して質が低いものであってはならず、ヨーロッパの司祭と同等のものでなければならないと強調しました。その結果、最初の地域の司祭であるエリアス・ムチョンデ神父とグレゴリー・ムパンダ神父が誕生し、1949年8月28日にクウィロのキリスト・ザ・キング教会で叙階されました。",
+  "Father Elias Mchonde was born in the Mahenge district, and Father Gregory Mpanda was born in Kipatimu, in the Dar es Salaam diocese, which was then known as the 'Apostolic Vicariate of Dar es Salaam.' Mahenge was part of that diocese."=>"",
 );
 ?>

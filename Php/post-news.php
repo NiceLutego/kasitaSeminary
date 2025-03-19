@@ -1,9 +1,9 @@
 <?php
     // Database configuration
-    $host = 'localhost';
-    $username = 'root';
-    $password = '';
-    $dbname = 'kasita_seminary';
+    $host = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "kasita_seminary";
 
     // Create connection
     $conn = new mysqli($host, $username, $password, $dbname);
@@ -12,15 +12,15 @@
         die("Connection failed: " . $conn->connect_error);
     }
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['upload'])) {
-        $date = filter_var($_POST['date']);
-        $title = filter_var($_POST['title']);
+        $date = filter_var($_POST['date'], FILTER_SANITIZE_STRING);
+        $title = filter_var($_POST['title'], FILTER_SANITIZE_STRING);
         $content = htmlspecialchars($_POST['content']);
       
         if ($date && $title && $content) {
             $stmt = $conn->prepare("INSERT INTO new_post (event_date, title, content) VALUES (?, ?, ?)");
             $stmt->bind_param("sss", $date, $title, $content);
             if ($stmt->execute()) {
-                echo "<p style='green;'>The notes posted successful!</p>";
+                echo "<p style='color:green;'>The notes were posted successfully!</p>";
             } else {
                 echo "<p style='color:red;'>The notes posting failed!</p>";
             }
@@ -32,16 +32,16 @@
 
     // Handle news deletion
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['remove'])) {
-        $new_id = $_POST['id'] ?? '';
+        $new_id = isset($_POST['id']) ? intval($_POST['id']) : 0;
 
         if (!empty($new_id)) {
             $stmt = $conn->prepare("DELETE FROM new_post WHERE id = ?");
             $stmt->bind_param('i', $new_id);
 
             if ($stmt->execute()) {
-                echo "<p>News removed successfully!</p>";
+                echo "<p style='color:green;'>News removed successfully!</p>";
             } else {
-                echo "<p>Error: " . $stmt->error . "</p>";
+                echo "<p style='color:red;'>Error: " . $stmt->error . "</p>";
             }
         }
     }
@@ -91,7 +91,7 @@
                     <label for="content">Content:</label>
                     <textarea name="content" id="content" rows="5" required></textarea><br><br>
 
-                    <button type="submit">Post News</button>
+                    <button type="submit" name="upload">Post News</button>
                 </form>
                 <h2>Posted news on the Notice Board.</h2>
                 <table>
@@ -112,3 +112,6 @@
     </div>
 </body>
 </html>
+<?php
+$conn->close();
+?>

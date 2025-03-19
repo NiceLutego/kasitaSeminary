@@ -1,13 +1,12 @@
 <?php
-    // Database configuration
-    $host = 'localhost';
-    $username = 'root';
-    $password = '';
-    $dbname = 'kasita_seminary';
+// Database configuration
+$host = 'localhost';
+$username = 'root';
+$password = '';
+$dbname = 'kasita_seminary';
 
-    // Create connection
-    $conn = new mysqli($host, $username, $password, $dbname);
-
+// Create connection
+$conn = new mysqli($host, $username, $password, $dbname);
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +14,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload Photos- Kasita Seminary Admin</title>
+    <title>Upload Photos - Kasita Seminary Admin</title>
     <link rel="stylesheet" href="../Styles/admins.css">
 </head>
 <body>
@@ -40,64 +39,76 @@
                 <h1>Upload Photos</h1>
             </header>
             <section class="media-actions">
-            <form action="" method="POST" enctype="multipart/form-data">
-                <label>Title:</label>
-                <input type="text" name="title" required><br><br>
-                <label>Type:</label>
-                <select name="type" required>
-                    <option value="image">Image</option>
-                </select><br><br>
-                <label>File:</label>
-                <input type="file" name="file" required><br><br>
-                <button type="submit" name="upload" style="margin-left:5%;margin-top:2%;width:30%;font-size:1.6vw;">Upload Photo</button>
-            </form>
-    <?php
-    // Handle File Upload
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['title'], $_POST['type'], $_FILES['file'])) {
-        $title = $_POST['title'];
-        $type = $_POST['type'];
-        $file = $_FILES['file'];
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <label>Title:</label>
+                    <input type="text" name="title" required><br><br>
+                    
+                    <label>Type:</label>
+                    <select name="type" required>
+                        <option value="image">Image</option>
+                    </select><br><br>
 
-        $allowedImageTypes = ['image/jpeg', 'image/png', 'image/gif'];
-        $maxFileSize = 20 * 1024 * 1024; // 20MB
+                    <label>Upload Files:</label>
+                    <input type="file" name="files[]" multiple required><br><br>
 
-        if ($file['error'] === UPLOAD_ERR_OK) {
-            $fileMimeType = mime_content_type($file['tmp_name']);
-            $fileSize = $file['size'];
+                    <button type="submit" name="upload" style="margin-left:5%; margin-top:2%; width:30%; font-size:1.6vw;">Upload Photo(s)</button>
+                </form>
 
-            if (($type === 'image' && in_array($fileMimeType, $allowedImageTypes))) {
+                <?php
+                // Handle File Upload
+                if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['title'], $_POST['type'], $_FILES['files'])) {
+                    $title = htmlspecialchars($_POST['title']);
+                    $type = $_POST['type'];
+                    $files = $_FILES['files'];
 
-                if ($fileSize <= $maxFileSize) {
+                    $allowedImageTypes = ['image/jpeg', 'image/png', 'image/gif'];
+                    $maxFileSize = 20 * 1024 * 1024; // 20MB per file
                     $targetDir = 'uploads/';
+
+                    // Create uploads directory if not exists
                     if (!is_dir($targetDir)) {
                         mkdir($targetDir, 0777, true);
                     }
-                    $filePath = $targetDir . basename($file['name']);
 
-                    if (move_uploaded_file($file['tmp_name'], $filePath)) {
-                        $stmt = $conn->prepare('INSERT INTO photo_gallery (event, file_path) VALUES (?, ?)');
-                        $stmt->execute([$title, $filePath]);
-                        echo "<p style='color:green;'>File uploaded successfully!</p>";
-                    } else {
-                        echo "<p style='color:red;'>File upload failed!</p>";
+                    $uploadedFiles = [];
+                    
+                    foreach ($files['tmp_name'] as $key => $tmp_name) {
+                        if ($files['error'][$key] === UPLOAD_ERR_OK) {
+                            $fileMimeType = mime_content_type($tmp_name);
+                            $fileSize = $files['size'][$key];
+
+                            if (in_array($fileMimeType, $allowedImageTypes) && $fileSize <= $maxFileSize) {
+                                $fileName = basename($files['name'][$key]);
+                                $filePath = $targetDir . $fileName;
+
+                                if (move_uploaded_file($tmp_name, $filePath)) {
+                                    // Store the uploaded file path in an array
+                                    $uploadedFiles[] = $filePath;
+                                }
+                            }
+                        }
                     }
-                } else {
-                    echo "<p style='color:red;'>File size exceeds the 20MB limit!</p>";
+
+                    // Insert uploaded images into the database
+                    if (!empty($uploadedFiles)) {
+                        foreach ($uploadedFiles as $filePath) {
+                            $stmt = $conn->prepare('INSERT INTO photo_gallery (event, file_path) VALUES (?, ?)');
+                            $stmt->bind_param("ss", $title, $filePath);
+                            $stmt->execute();
+                            $stmt->close();
+                        }
+                        echo "<p style='color:green;'>Images uploaded successfully!</p>";
+                    } else {
+                        echo "<p style='color:red;'>No valid images uploaded!</p>";
+                    }
                 }
-            } else {
-                echo "<p style='color:red;'>Invalid file type!</p>";
-            }
-        } else {
-            echo "<p style='color:red;'>Error during file upload!</p>";
-        }
-    }
-?>
-          </section>
+                ?>
+            </section>
         </main>
     </div>
 </body>
 </html>
-<?php
 
+<?php
 $conn->close();
 ?>

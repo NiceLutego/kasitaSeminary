@@ -7,6 +7,21 @@
 
     // Create connection
     $conn = new mysqli($host, $username, $password, $dbname);
+    // Handle media deletion
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['remove'])) {
+        $photo_id = $_POST['photo_id'] ?? '';
+
+        if (!empty($photo_id)) {
+            $stmt = $conn->prepare("DELETE FROM photo_gallery WHERE id = ?");
+            $stmt->bind_param('i', $photo_id);
+
+            if ($stmt->execute()) {
+                echo "<p style='color:green;'>Photo Deleted successfully!</p>";
+            } else {
+                echo "<p style='color:red;'>Error: " . $stmt->error . "</p>";
+            }
+        }
+    }
 
 
     $result = $conn ->query('SELECT * FROM photo_gallery');

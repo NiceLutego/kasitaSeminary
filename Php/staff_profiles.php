@@ -13,50 +13,9 @@ $admins = $conn->query("SELECT * FROM admins");
 $departments = $conn->query("SELECT * FROM departments");
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kasita Seminary Staff Profiles</title>
-    <link rel="stylesheet" href="../Styles/staff.css">
-</head>
-<body>
-<div class="header">
-    <div class="header__logo">
-     <span class="header__logo__burger"></span>
-    </div>
-    <nav class="header__nav">
-        <ul class="header__nav__menu">
-          <li class="header__nav__menu__item">
-            <a href="../Pages/index.html" class="header__nav__menu__item__link">Home</a>
-          </li>
-          <li class="header__nav__menu__item">
-            <a href="../Php/about.php" class="header__nav__menu__item__link">About</a>
-          </li>
-          <li class="header__nav__menu__item">
-            <a href="../Php/staff_profiles.php" class="header__nav__menu__item__link">Staff</a>
-          </li>
-          <li class="header__nav__menu__item">
-            <a href="../Pages/login.html" class="header__nav__menu__item__link">Administration</a>
-          </li>
-          <li class="header__nav__menu__item">
-            <a href="" class="header__nav__menu__item__link">Departments
-            <div class="dropdown">
-            <?php while ($department = $departments->fetch_assoc()): ?>
-                <a href="departments.php?id=<?= $department['id'] ?>"><?= htmlspecialchars($department['department_name']) ?></a>
-            <?php endwhile; ?>
-        </div>
-            </a>
-          </li>
-          <li class="header__nav__menu__item">
-          <a href="../Php/photo_gallery.php" class="header__nav__menu__item__link">Photos</a></li>
-          <li class="header__nav__menu__item">
-            <a href="../Php/contacts.php" class="header__nav__menu__item__link">Contacts</a>
-          </li>
-        </ul>
-    </nav>
-  </div>
+<?php
+include '../Php/generalHeader.php';
+?>
 <div class="container">
     <?php while ($admin = $admins->fetch_assoc()): ?>
         <div class="profile <?= $admin['position_order'] === 'Rector' ? 'Rector' : '' ?>">

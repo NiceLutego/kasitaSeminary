@@ -7,15 +7,13 @@ $lang = array(
     "about_school" => "About the School",
     "mission_vision" =>"Our Mission & Vision",
     "staff_members" => "Staff Members",
-
     "staff" => "Staff",
-
     "sections" => "Sections",
     "administration" => "Administration",
     "school_mgmt_team" => "School Management Team",
     "departments" => "Departments",
-    "photos" => "Photo Gallery",
-    "contacts" => "Contact Us",
+    "photos" => "Photo",
+    "contacts" => "Contacts",
     "manage_posts" => "Manage Posts",
     "edit_profile" => "Edit Profile",
     "view_messages" => "View Messages",
@@ -57,6 +55,12 @@ $lang = array(
     "Notice board"=>"Notice board",
     "View news"=>"View news",
     "View results"=>"View results",
-    "Latest announcements"=>"Latest announcements"
+    "Latest announcements"=>"Latest announcements",
+    "The opening of Kasita Seminary in 1950 should never be considered the birth of the idea of establishing a seminary as a school to prepare young men who would become priests in the future. The idea of having local priests had been in the minds of missionaries since they began preaching the Gospel in the vicariate of Dar es Salaam."=>"The opening of Kasita Seminary in 1950 should never be considered the birth of the idea of establishing a seminary as a school to prepare young men who would become priests in the future. The idea of having local priests had been in the minds of missionaries since they began preaching the Gospel in the vicariate of Dar es Salaam.",
+    "The Capuchin missionaries arrived in Tanzania in 1921, taking over from the German Benedictines who left in 1917 after their defeat in the First World War against the British."=>"The Capuchin missionaries arrived in Tanzania in 1921, taking over from the German Benedictines who left in 1917 after their defeat in the First World War against the British.",
+    "From the beginning, the missionaries saw the importance of having local priests, as it was the only way to root the church deeply in this country. In 1927, in Sali, they gathered a few young men and prepared them for seminary training. After one or two years, this group of young men joined the students of the Kwiro Central School. There, they were carefully evaluated to see if they were suitable for priestly training and were also taught Latin at that time."=>"From the beginning, the missionaries saw the importance of having local priests, as it was the only way to root the church deeply in this country. In 1927, in Sali, they gathered a few young men and prepared them for seminary training. After one or two years, this group of young men joined the students of the Kwiro Central School. There, they were carefully evaluated to see if they were suitable for priestly training and were also taught Latin at that time.",
+    "They emphasized that, under no circumstances, should the priestly training given to local priests be of lower quality but should be equal to that offered to priests in Europe. As a result, they were able to obtain the first local priests: Father Elias Mchonde and Father Gregory Mpanda, who were ordained at the Church of Christ the King, Kwiro, on August 28, 1949."=>"They emphasized that, under no circumstances, should the priestly training given to local priests be of lower quality but should be equal to that offered to priests in Europe. As a result, they were able to obtain the first local priests: Father Elias Mchonde and Father Gregory Mpanda, who were ordained at the Church of Christ the King, Kwiro, on August 28, 1949.",
+    "Father Elias Mchonde was born in the Mahenge district, and Father Gregory Mpanda was born in Kipatimu, in the Dar es Salaam diocese, which was then known as the 'Apostolic Vicariate of Dar es Salaam.' Mahenge was part of that diocese."=>"Father Elias Mchonde was born in the Mahenge district, and Father Gregory Mpanda was born in Kipatimu, in the Dar es Salaam diocese, which was then known as the 'Apostolic Vicariate of Dar es Salaam.' Mahenge was part of that diocese."
+
 );
 ?>

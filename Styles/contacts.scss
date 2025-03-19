@@ -76,52 +76,6 @@ a {
 ul {
   list-style-type: none;
 }
-
-/* Header */
-.header {
-  background-color: rgb(21, 34, 78);
-  color: white;
-  padding: 3rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 20vh;
-}
-
-.header__logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.header__logo__burger {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin-top: 6px;
-  position: relative;
-}
-
-.header__nav ul {
-  display: flex;
-}
-
-.header__nav__menu__item {
-  margin-left: 20px;
-}
-
-.header__nav__menu__item__link {
-  color: white;
-  font-size: 2vw;
-  padding: 10px;
-  transition: background-color 0.3s ease;
-}
-
-.header__nav__menu__item__link:hover {
-  background-color: #575757;
-  border-radius: 10px;
-}
-
 /* Contacts Section */
 .contacts {
   padding: 3rem;
@@ -232,143 +186,7 @@ button[type="submit"]:hover {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-
-  .header{
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    align-items: center;
-    background-color: rgb(21, 34, 78);
-    right: 0;
-    left: 0;
-
-    &__logo{
-      display: block;
-      align-items: right;
-      position: absolute;
-      z-index: 3;
-      right: 1rem;
-      top: 1rem;
-      height: 20px;
-      width: 28px;
-      cursor: pointer;
-      @include transition-ease;
-
-      &__burger{
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0.5rem;
-        width: 28px;
-        height: 3px;
-        background-color: white;
-        @include transition-ease;
-        z-index: 2;
-
-        &::before{
-          content: '';
-          position: absolute;
-          top: -8px;
-          width: 28px;
-          height: 3px;
-          background-color: white;
-          @include transition-ease;
-        }
-
-        &::after{
-          content: '';
-          position: absolute;
-          top: 8px;
-          width: 28px;
-          height: 3px;
-          background-color: white;
-          @include transition-ease;
-        }
-
-        &.open{
-          transform: rotate(720deg);
-          background: transparent;
-
-          &::before{
-            transform: rotate(45deg) translate(5px, 8px);
-
-          }
-          &::after{
-            width: 28px;
-            transform: rotate(-45deg) translate(3px, -7px);
-          }
-        }
-      }
-    }
-
-    &__nav{
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      opacity: 0.98;
-      visibility: hidden;
-
-      &.open{
-        visibility: visible;
-      }
-
-      &__menu{
-        margin-left: 30%;
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        justify-content: right;
-        width: 70vw;
-        height: 100vh;
-        gap: 0.3vh;
-        overflow: hidden;
-        background-color: rgb(21, 34, 78);
-        list-style-type: none;
-        padding-right: 1rem;
-        transform: translateY(-100%);
-        @include transition-ease;
-
-        &.open{
-          transform: translateY(0);
-        }
-
-        &__item{
-          transform: translateX(100vw);
-          @include transition-ease;
-          &.open{
-            transform: translateX(0);
-          }
-
-          &.active > a {
-            color: $secondary-color;
-          }
-          &__link{
-            width: auto;
-            display: inline-block;
-            font-size: 1rem;
-            text-transform: uppercase;
-            padding: 0.9rem 0;
-            font-weight: 600;
-            // border: 2px solid red;
-            @include transition-ease;
-            &:hover{
-              color: $secondary-color;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  @for $i from 1 through 7{
-
-    .header__nav__menu__item:nth-child(#{$i}){
-      transition-delay: ($i *0.2s) + 0.15s;
-    }
-  } 
+@media (max-width: 768px) { 
   .contacts__footer__container {
     flex-direction: column;
     align-items: center;
@@ -398,6 +216,7 @@ body {
 
 .main-content {
   flex-grow: 1;
+  margin-top: 3rem;
 }
 
 /* Footer Styles */

@@ -6,6 +6,7 @@
   <title></title>
   <link rel="stylesheet" href="../Styles/header.css">
   <link rel="stylesheet" href="../Styles/footer.css">
+  <link rel="stylesheet" href="../Styles/profile-styles.css">
 </head>
 <body>
 <nav>
@@ -13,24 +14,37 @@
     <a href="index.php">Kasita Minor Seminary</a>
   </div>
   <ul class="nav-links">
-    <li><a href="index.php">Home</a></li>
-    <li><a href="about.php">About Us</a></li>
+    <li><a href="../Pages/index.php">Home</a></li>
     <li class="dropdown">
-      <a href="offices.php">Offices</a>
+      <a href="javascript:void(0);">About Us</a>
       <ul class="dropdown-content">
-        <li><a href="rector.php">Rector</a></li>
-        <li><a href="vice_rector.php">Vice Rector</a></li>
-        <li><a href="academic_masters.php">Academic Masters</a></li>
-        <li><a href="training_mentor.php">Training Mentor</a></li>
+        <li><a href="../Php/about.php">About Our School</a></li>
+        <li><a href="../Php/our-history.php">Our History</a></li>
+        <li><a href="../Php/mission-vision.php">Mission & Vision</a></li>
+        <li><a href="../Php/staff_profiles.php">Staff Members</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0);">Offices</a>
+      <ul class="dropdown-content">
+        <li><a href="../Php/school_mgmt_team.php">School Management Team</a></li>
+        <li><a href="../Php/rector.php">Rector</a></li>
+        <li><a href="../Php/vice_rector.php">Vice Rector</a></li>
+        <li><a href="../Php/academic_masters.php">Academic Masters</a></li>
+        <li><a href="../Php/training_mentor.php">Training Mentor</a></li>
+        <li><a href="../Php/department_heads.php">Departments Heads</a></li>
+        <li><a href="../Php/subject_teacher.php">Subject Teacher</a></li>
+        <li><a href="../Php/class_teacher.php">Class Teacher</a></li>
+        <li><a href="../Php/student_welfare.php">Student Welfare</a></li>
+        <li><a href="../Php/patron.php">Patrons</a></li>
+        <li><a href="../Php/sports_master.php">Sports Master</a></li>
+        <li><a href="../Php/production_teacher.php">Production Teacher</a></li>
+
         <!-- Add other offices here -->
       </ul>
     </li>
-    <li><a href="staff.php">Staff</a></li>
-    <li><a href="calendar.php">School Calendar</a></li>
-    <li><a href="news.php">News & Announcements</a></li>
-    <li><a href="results.php">Results</a></li>
-    <li><a href="gallery.php">Photo Gallery</a></li>
-    <li><a href="contact.php">Contact Us</a></li>
+    <li><a href="../Php/photo_gallery.php">Photos</a></li>
+    <li><a href="../Php/contacts.php">Contact Us</a></li>
     <li><a href="#" id="language-toggle">Language</a></li>
     <li><a href="#" id="mode-toggle">Mode</a></li>
   </ul>

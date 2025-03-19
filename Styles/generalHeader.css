@@ -1,0 +1,211 @@
+@charset "UTF-8";
+/* Main Header */
+.header {
+  display: flex;
+  margin-top: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(21, 34, 78);
+  padding: 1rem 2rem;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 20vh;
+  overflow: visible;
+}
+
+/* Navigation Menu */
+.header__nav__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3vw;
+  margin-right: 25%;
+  list-style: none;
+}
+
+.header__nav__menu__item {
+  font-size: 1.5vw;
+  font-weight: 500;
+  position: relative;
+}
+
+.language-item {
+  margin-top: 2%;
+  height: 5vh;
+  width: 7vw;
+}
+.language-item form select {
+  height: 6vh;
+  padding: 0 0.1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+/* Dropdown container */
+.header__nav__menu__item__drop {
+  cursor: pointer;
+}
+
+/* Dropdown Links */
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #0059b3;
+  min-width: 80vw;
+  z-index: 6;
+  top: 100%;
+  overflow: visible;
+}
+
+.dropdown a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.dropdown a:hover {
+  background-color: #0073e6;
+}
+
+/* Show dropdown on hover */
+.header__nav__menu__item:hover .dropdown {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 10px; /* Space between columns */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(21, 34, 78);
+    right: 0.5%;
+    left: 0;
+  }
+  .header__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    opacity: 0.98;
+    visibility: hidden;
+  }
+  /* Ensure that the burger icon is positioned properly on small screens */
+  .header__logo {
+    position: absolute;
+    z-index: 1;
+    right: 2rem;
+    top: 1rem;
+    height: 20px;
+    width: 28px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+  .header__logo__burger {
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    z-index: 2; /* Ensure it’s above other content */
+    transition: all 0.3s ease-in-out;
+    /* Transform hamburger when clicked */
+  }
+  .header__logo__burger::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  .header__logo__burger::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 28px;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    top: 8px;
+  }
+  .header__logo__burger.open {
+    transform: rotate(720deg);
+    background: transparent;
+  }
+  .header__logo__burger.open::before {
+    transform: rotate(45deg) translate(5px, 8px);
+  }
+  .header__logo__burger.open::after {
+    width: 28px;
+    transform: rotate(-45deg) translate(3px, -7px);
+  }
+  .header__nav.open {
+    visibility: visible;
+  }
+  .header__nav__menu {
+    margin-left: 30%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: right;
+    width: 70vw;
+    height: 100vh;
+    gap: 0.3vh;
+    background-color: rgb(21, 34, 78);
+    padding-right: 1rem;
+    transform: translateY(-100%);
+  }
+  .header__nav__menu.open {
+    transform: translateY(0);
+  }
+  .header__nav__menu__item {
+    font-size: 1.2rem;
+  }
+  .dropdown-menu {
+    position: absolute; /* Or 'fixed' if necessary */
+    z-index: 1100; /* Higher than navbar */
+    background-color: white; /* Optional: helps keep it clear */
+  }
+  .language-item {
+    margin-top: 2%;
+    height: 5vh;
+    width: 10vw;
+  }
+  .language-item form select {
+    height: 6vh;
+    padding: 0 0.1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    width: 15vw;
+  }
+  .header__nav__menu__item:nth-child(1) {
+    transition-delay: 0.25s;
+  }
+  .header__nav__menu__item:nth-child(2) {
+    transition-delay: 0.35s;
+  }
+  .header__nav__menu__item:nth-child(3) {
+    transition-delay: 0.45s;
+  }
+  .header__nav__menu__item:nth-child(4) {
+    transition-delay: 0.55s;
+  }
+  .header__nav__menu__item:nth-child(5) {
+    transition-delay: 0.65s;
+  }
+  .header__nav__menu__item:nth-child(6) {
+    transition-delay: 0.75s;
+  }
+}/*# sourceMappingURL=generalHeader.css.map */

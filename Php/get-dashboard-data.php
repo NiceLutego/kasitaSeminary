@@ -21,6 +21,15 @@
     $staffQuery=$pdo->query("SELECT COUNT(*) FROM staff");
     $totalStaff=$staffQuery->fetchColumn();
 
+    $schoolManagementTeam = $pdo ->query("SELECT COUNT(*) FROM management_team");
+    $totalManagementTeam = $schoolManagementTeam ->fetchColumn();
+
+    $academicMasters = $pdo ->query("SELECT COUNT(*) FROM academic_masters");
+    $totalAcademicMasters = $academicMasters ->fetchColumn();
+
+    $trainingMentor = $pdo ->query("SELECT COUNT(*) FROM training_mentor");
+    $totalTrainingMentor = $trainingMentor->fetchColumn();
+
     echo json_encode([
       'totalMedia'=>$totalMedia,
       'totalNewsPosts'=>$totalDepartments,

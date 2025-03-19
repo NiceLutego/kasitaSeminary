@@ -21,9 +21,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'], $_POST['p
     }
 
 }
-// Admin username and password (you can change this)
-// $username = 'admin';
-// $password = 'rector'; // Use a strong password
+
+//handle the admin removal
+if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['remove'])){
+    $id = $_POST['id'];
+
+    if(!empty($id)){
+        $stmt = $conn->prepare("DELETE FROM admin WHERE id = ?");
+        $stmt->bind_param('i', $id);
+
+        if($stmt->execute()){
+            echo "<p>The admin is deleted successful.</p>";
+        }
+        else{
+            echo "<p>Error ".$stmt->error. "</p>";
+        }
+    }
+}
+
+$result = $conn ->query("SELECT id,username FROM `admin`");
 mysqli_close($conn); // Close the connection
 ?>
 
@@ -50,7 +66,7 @@ mysqli_close($conn); // Close the connection
                     <li><a href="../Php/getMessages.php">Message Management</a></li>
                     <li><a href="../Php/manage_photo.php">Photos Management</a></li>
                     <li><a href="../Php/manage_events.php">Events Management</a></li>
-                    <li><a href="../Pages/index.html">Home</a></li>
+                    <li><a href="../Pages/index.php">Home</a></li>
                 </ul>
             </nav>
         </aside>
@@ -68,6 +84,18 @@ mysqli_close($conn); // Close the connection
 
                 <button type="submit" name="upload" id="upload">Create Admin</button>
             </form>
+            </section>
+            <section class="admins" id="admins">
+                <ul>
+                <?php while ($row = $result->fetch_assoc()): ?>
+                    <li>  
+                        <?= htmlspecialchars($row['username']); ?>&nbsp;&nbsp;&nbsp;
+                        <form action="" method="POST" style="display:inline" onsubmit="return confirm('Are you sure you want to delete this admin?');">
+                        <input type="hidden" name="id" value="<?= htmlspecialchars($row['id']); ?>">
+                            <button type="submit" value="Delete" name="remove">Delete</button>
+                        </form>
+                <?php endwhile?>
+                </ul>
             </section>
         </main>
     </div>

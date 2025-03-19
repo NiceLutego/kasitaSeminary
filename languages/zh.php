@@ -55,6 +55,11 @@ $lang =array(
   "Notice board"=>"公告栏",
   "View news"=>"查看新闻",
   "View results"=>"查看结果",
-  "Latest announcements"=>"最新公告"
+  "Latest announcements"=>"最新公告",
+  "The opening of Kasita Seminary in 1950 should never be considered the birth of the idea of establishing a seminary as a school to prepare young men who would become priests in the future. The idea of having local priests had been in the minds of missionaries since they began preaching the Gospel in the vicariate of Dar es Salaam."=>"卡西塔修院于1950年的成立，绝不应被视为创立一所培养未来成为牧师的青年的修院学校这一想法的诞生。自传教士们开始在达累斯萨拉姆教区传教以来，拥有本地牧师的想法一直存在于他们的心中。",
+  "The Capuchin missionaries arrived in Tanzania in 1921, taking over from the German Benedictines who left in 1917 after their defeat in the First World War against the British."=>"1921年，加布津会传教士抵达坦桑尼亚，接替了1917年在与英国的第一次世界大战中失败后离开的德国本笃会修士。",
+  "From the beginning, the missionaries saw the importance of having local priests, as it was the only way to root the church deeply in this country. In 1927, in Sali, they gathered a few young men and prepared them for seminary training. After one or two years, this group of young men joined the students of the Kwiro Central School. There, they were carefully evaluated to see if they were suitable for priestly training and were also taught Latin at that time."=>"从一开始，传教士们就认识到培养本地神父的重要性，因为这是将教会深深扎根于这个国家的唯一途径。1927年，在萨利，他们聚集了一些年轻人，为他们提供修道院培训。 一两年后，这些年轻人加入了奎罗中央学校的学生。 在那里，他们被仔细评估是否适合接受神职培训，并在那个时候也学习了拉丁语。",
+  "They emphasized that, under no circumstances, should the priestly training given to local priests be of lower quality but should be equal to that offered to priests in Europe. As a result, they were able to obtain the first local priests: Father Elias Mchonde and Father Gregory Mpanda, who were ordained at the Church of Christ the King, Kwiro, on August 28, 1949."=>"他们强调，绝不能让本地神父接受的培训质量低于欧洲神父，而是要与欧洲神父接受的培训保持同等水平。 最终，他们培养出了首批本地神父：埃利亚斯·姆琼德神父和格雷戈里·姆潘达神父，他们于1949年8月28日在奎罗基督君王教堂被授予圣职。",
+  "Father Elias Mchonde was born in the Mahenge district, and Father Gregory Mpanda was born in Kipatimu, in the Dar es Salaam diocese, which was then known as the 'Apostolic Vicariate of Dar es Salaam.' Mahenge was part of that diocese."=>"",
 );
 ?>

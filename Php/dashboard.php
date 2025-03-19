@@ -30,6 +30,7 @@
                 <ul>
                     <li><a href="../Php/dashboard.php">Dashboard</a></li>
                     <li><a href="../Php/create_admin.php">Account Management</a></li>
+                    <li><a href="../Php/manage-offices.php">Offices Management</a></li>
                     <li><a href="../Php/manage-media.php">Manage Media</a></li>
                     <li><a href="../Php/post-news.php">Post News</a></li>
                     <li><a href="../Php/manage-users.php">User Management</a></li>

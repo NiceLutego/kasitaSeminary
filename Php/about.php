@@ -1,44 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Kasita Seminary</title>
-  <link rel="stylesheet" href="../Styles/about.css">
-  <link rel="stylesheet" href=
-  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-<body>
-  <div class="header">
-    <div class="header__logo">
-     <span class="header__logo__burger"></span>
-    </div>
-    <nav class="header__nav">
-        <ul class="header__nav__menu">
-          <li class="header__nav__menu__item">
-            <a href="../Pages/index.php" class="header__nav__menu__item__link">Home</a>
-          </li>
-          <li class="header__nav__menu__item">
-            <a href="../Php/about.php" class="header__nav__menu__item__link">About</a>
-          </li>
-          <li class="header__nav__menu__item">
-            <a href="../Php/staff_profiles.php" class="header__nav__menu__item__link">Staff</a>
-          </li>
-          <li class="header__nav__menu__item">
-            <a href="../Pages/login.html" class="header__nav__menu__item__link">Administration</a>
-          </li>
-          <li class="header__nav__menu__item">
-            <a href="../Php/departments.php" class="header__nav__menu__item__link">Departments</a>
-          </li>
-          <li class="header__nav__menu__item">
-            <a href="../Php/photo_gallery.php" class="header__nav__menu__item__link">Photo Gallery</a></li>
-          <li class="header__nav__menu__item">
-            <a href="../Php/contacts.php" class="header__nav__menu__item__link">Contacts</a>
-          </li>
-        </ul>
-    </nav>
-  </div>
-  <div class="about" id="about">
+<?php
+include '../Php/generalHeader.php';
+?>  
+<div class="about" id="about">
     <div class="about__header">
       <h1 class="about__header__text">
         ABOUT KASITA SEMINARY
@@ -59,13 +22,11 @@
     </div>
 <footer class="footer">
   <div class="footer__links">
-    <a href="../Pages/index.html">Home</a>
-    <a href="../Php/about.php">About</a>
-    <a href="../Php/staff_profiles.php">Staff</a>
-    <a href="../Pages/login.html">Administration</a>
-    <a href="../Php/departments.php">Departments</a>
-    <a href="../Php/photo_gallery.php">Photo Gallery</a>
-    <a href="../Php/contacts.php">Contact</a>
+    <a href="../Pages/index.html"><?php echo $lang['home'];?></a>
+    <a href="../Php/about.php"><?php echo $lang['about'];?></a>
+    <a href="../Php/staff_profiles.php"><?php echo $lang['staff_members'];?></a>
+    <a href="../Php/photo_gallery.php"><?php echo $lang['photos'];?></a>
+    <a href="../Php/contacts.php"><?php echo $lang['contacts'];?></a>
   </div>
   <p>&copy; 2025 Kasita Seminary. All Rights Reserved.</p>
 </footer>
