@@ -39,6 +39,7 @@
                     <li><a href="../Php/manage_photo.php">Photos Management</a></li>
                     <li><a href="../Php/manage_events.php">Events Management</a></li>
                     <li><a href="../Pages/index.html">Home</a></li>
+                    <li><a href="../Php/logout.php">Logout</a></li>
                 </ul>
             </nav>
         </aside>

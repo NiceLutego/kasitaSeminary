@@ -57,7 +57,7 @@ include '../Php/generalHeader.php';
         <a href="../Php/photo_gallery.php"><?php echo $lang['photos'];?></a>
         <a href="../Php/contacts.php"><?php echo $lang['contacts'];?></a>
       </div>
-      <p>&copy; 2025 Kasita Seminary. All Rights Reserved.</p>
+      <p>&copy; 2025 <?php echo $lang['kasita_seminary_rights'];?></p>
     </footer>
   <script src="../js/main.js"></script>
   <script>

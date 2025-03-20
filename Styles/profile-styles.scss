@@ -113,6 +113,14 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
+.training-mentor{
+  display: flex;
+  align-items: center;
+  background: #eef3f7;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
 .team-member{
   display: flex;
   align-items: center;
@@ -239,4 +247,8 @@ body {
   font-size: 18px;
   color: red;
 }
-
+p{
+  justify-content: center;
+  text-align: justify;
+  align-items: center;
+}

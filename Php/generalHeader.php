@@ -29,6 +29,9 @@ if (file_exists($lang_file)) {
   <link rel="stylesheet" href="../Styles/contacts.css">
   <link rel="stylesheet" href="../Styles/style.css">
   <link rel="stylesheet" href="../Styles/history.css">
+  <link rel="stylesheet" href="../Styles/ordinary.css">
+  <link rel="stylesheet" href="../Styles/advanced.css">
+  <link rel="stylesheet" href="../Styles/outside.css">
   <link rel="stylesheet" href="../Styles/mission-vision.css">
   <link rel="stylesheet" href="../Styles/staff.css">
   <link rel="stylesheet" href="../Styles/generalHeader.css">
@@ -46,18 +49,18 @@ if (file_exists($lang_file)) {
             <li class="header__nav__menu__item">
                 <a href="../Pages/index.php" class="header__nav__menu__item__link"><?php echo $lang['home']; ?></a>
             </li>
-            <li class="header__nav__menu__item">
+            <li class="header__nav__menu__item drop-down">
                 <a href="javascript:void(0);" class="header__nav__menu__item__drop"><?php echo $lang['about']; ?></a>
-                <div class="dropdown">
+                <div class="dropdown-content">
                     <a href="../Php/about.php"><?php echo $lang['about_school']; ?></a>
                     <a href="../Php/our-history.php"><?php echo $lang['our_history']; ?></a>
                     <a href="../Php/mission-vision.php"><?php echo $lang['mission_vision']; ?></a>
                     <a href="../Php/staff_profiles.php"><?php echo $lang['staff_members']; ?></a>
                 </div>
             </li>
-            <li class="header__nav__menu__item">
+            <li class="header__nav__menu__item drop-down">
                 <a href="javascript:void(0);" class="header__nav__menu__item__drop"><?php echo $lang['administration']; ?></a>
-                <div class="dropdown">
+                <div class="dropdown-content">
                     <a href="../Php/school_mgmt_team.php"><?php echo $lang['school_mgmt_team']; ?></a>
                     <a href="../Php/rector.php"><?php echo $lang['rector']; ?></a>
                     <a href="../Php/vice_rector.php"><?php echo $lang['vice_rector']; ?></a>
@@ -92,6 +95,8 @@ if (file_exists($lang_file)) {
                         <option value="zh" <?php echo (isset($_GET['lang']) && $_GET['lang']== 'zh') ? 'selected' : ''; ?>>Chinese</option>
                         <option value="ru" <?php echo (isset($_GET['lang']) && $_GET['lang']== 'ru') ? 'selected' : ''; ?>>Russia</option>
                         <option value="hi" <?php echo (isset($_GET['lang']) && $_GET['lang']== 'hi') ? 'selected' : ''; ?>>Hindi</option>
+                        <option value="ja" <?php echo (isset($_GET['lang']) && $_GET['lang']== 'ja') ? 'selected' : ''; ?>>Japanese</option>
+                        <option value="pt" <?php echo (isset($_GET['lang']) && $_GET['lang']== 'pt') ? 'selected' : ''; ?>>Portuguese</option>
                         <!-- Add more language options here -->
                     </select>
                 </form>

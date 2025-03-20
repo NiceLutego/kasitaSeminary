@@ -1,41 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ordinary level</title>
-  <link rel="stylesheet" href="../Styles/ordinary.css">
-  <link rel="stylesheet" href=
-  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-<body>
-  <div class="header">
-    <div class="header__logo">
-     <span class="header__logo__burger"></span>
-    </div>
-    <nav class="header__nav">
-        <ul class="header__nav__menu">
-          <li class="header__nav__menu__item">
-            <a href="../Pages/index.html" class="header__nav__menu__item__link">Home</a>
-          </li>
-          <li class="header__nav__menu__item">
-            <a href="../Php/about.php" class="header__nav__menu__item__link">About</a>
-          </li>
-          <li class="header__nav__menu__item">
-            <a href="../Pages/login.html" class="header__nav__menu__item__link">Administration</a>
-          </li>
-          <li class="header__nav__menu__item">
-            <a href="../Php/departments.php" class="header__nav__menu__item__link">Departments</a>
-          </li>
-          <li class="header__nav__menu__item">
-            <a href="../Php/photo_gallery.php" class="header__nav__menu__item__link">Photos</a>
-          </li>
-          <li class="header__nav__menu__item">
-            <a href="../Php/contacs.php" class="header__nav__menu__item__link">Contacts</a>
-          </li>
-        </ul>
-    </nav>
-  </div>
+<?php
+include '../Php/generalHeader.php';
+?>
 <div class="about__name__division">
         <div class="about__name__division__1">
           <h1 class="about__name__division__1__name">
@@ -78,16 +43,15 @@
             </div>
           </div>
         </div>
-        <button type="button" onclick="location.href='../Php/advanced_level.php'" class="seebtn">See More</button>
+        <button type="button" onclick="location.href='../Php/advanced_level.php'" class="seebtn"><?php echo $lang['see_more'];?></button>
   <footer class="footer">
   <div class="footer__links">
-    <a href="../Pages/index.html">Home</a>
-    <a href="../Php/about.php">About</a>
-    <a href="../Pages/login.html">Administration</a>
-    <a href="../Php/departments.php">Departments</a>
-    <a href="../Php/contacts.php">Contact</a>
+    <a href="../Pages/index.php"><?php echo $lang['home'];?></a>
+    <a href="../Php/about.php"><?php echo $lang['about'];?></a>
+    <a href="../Pages/login.html"><?php echo $lang['administration'];?></a>
+    <a href="../Php/contacts.php"><?php echo $lang['contacts'];?></a>
   </div>
-  <p>&copy; 2025 Kasita Minor Seminary. All Rights Reserved.</p>
+  <p class="footer">&copy; 2025 <?php echo $lang['kasita_seminary_rights'];?></p>
 </footer>
     <script src="../js/main.js"></script>
 </body>

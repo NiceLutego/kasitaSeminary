@@ -4,57 +4,9 @@ $secondary-color: #1abc9c;
 @mixin transition-ease{
   transition: all 0.5s ease-in-out;
 }
-
 /* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: rgb(237, 238, 240);
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgb(29,47,111);
-  padding: 1rem 2rem;
-  color: #fff;
-  width: 95%;
-  z-index: 2;
-  position: fixed;
-
-  &__logo__burger {
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-
-  &__nav__menu {
-    display: flex;
-    list-style: none;
-
-    &__item {
-      margin: 0 1rem;
-
-      &__link {
-        color: #fff;
-        text-decoration: none;
-        transition: color 0.3s;
-        font-size: 2vw;
-
-        &:hover {
-          color: #ffd54f;
-        }
-      }
-    }
-  }
-}
 .about__name__division__2 {
-  margin-top: 7%;
+  margin-top: 10%;
   &__name {
     text-align: center;
     font-size: 1.8rem;
@@ -128,7 +80,7 @@ body {
     background: #e0f2f1;
     padding: 1rem;
     border-radius: 8px;
-    height: 43vh;
+    height: 55vh;
     color: #ffffff; /* White text */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Dark shadow */
   }
@@ -168,7 +120,7 @@ body {
     margin: 0;
   }
 }
-button{
+.seebtn{
   width: 20vw;
   height: 8vh;
   font-size: 2vw;
@@ -190,149 +142,10 @@ button{
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  body{
-    background-color: rgb(237, 238, 240);
-  }
-  .header{
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    align-items: center;
-    background-color: rgb(21, 34, 78);
-    right: 3%;
-    left: 0;
-
-    &__logo{
-      display: block;
-      align-items: right;
-      position: absolute;
-      z-index: 3;
-      right: 6rem;
-      top: 1rem;
-      height: 20px;
-      width: 28px;
-      cursor: pointer;
-      @include transition-ease;
-
-      &__burger{
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0.5rem;
-        width: 28px;
-        height: 3px;
-        background-color: white;
-        @include transition-ease;
-        z-index: 2;
-
-        &::before{
-          content: '';
-          position: absolute;
-          top: -8px;
-          width: 28px;
-          height: 3px;
-          background-color: white;
-          @include transition-ease;
-        }
-
-        &::after{
-          content: '';
-          position: absolute;
-          top: 8px;
-          width: 28px;
-          height: 3px;
-          background-color: white;
-          @include transition-ease;
-        }
-
-        &.open{
-          transform: rotate(720deg);
-          background: transparent;
-
-          &::before{
-            transform: rotate(45deg) translate(5px, 8px);
-
-          }
-          &::after{
-            width: 28px;
-            transform: rotate(-45deg) translate(3px, -7px);
-          }
-        }
-      }
-    }
-
-    &__nav{
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      opacity: 0.98;
-      visibility: hidden;
-
-      &.open{
-        visibility: visible;
-      }
-
-      &__menu{
-        margin-left: 30%;
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        justify-content: right;
-        width: 70vw;
-        height: 100vh;
-        gap: 0.3vh;
-        overflow: hidden;
-        background-color: rgb(21, 34, 78);
-        list-style-type: none;
-        padding-right: 1rem;
-        transform: translateY(-100%);
-        @include transition-ease;
-
-        &.open{
-          transform: translateY(0);
-        }
-
-        &__item{
-          transform: translateX(100vw);
-          @include transition-ease;
-          &.open{
-            transform: translateX(0);
-          }
-
-          &.active > a {
-            color: $secondary-color;
-          }
-          &__link{
-            width: auto;
-            display: inline-block;
-            font-size: 1rem;
-            text-transform: uppercase;
-            padding: 0.9rem 0;
-            font-weight: 600;
-            // border: 2px solid red;
-            @include transition-ease;
-            &:hover{
-              color: $secondary-color;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  @for $i from 1 through 7{
-
-    .header__nav__menu__item:nth-child(#{$i}){
-      transition-delay: ($i *0.2s) + 0.15s;
-    }
-  }
-
   .about__name__division__2 {
     display: flex;
     flex-flow: column wrap;
-    margin-top: 50%;
+    margin-top: 10%;
     &__name {
       margin-top: 10%;
       text-align: center;
@@ -407,16 +220,16 @@ button{
           }
         }
       }
-      button{
-        margin-top: 20%;
-      }
 
       .seebtn{
+        margin-top: 2%;
         width: 70%;
         transform: translateX(-30%);
         font-size: 4.5vw;
         font-weight: 600;
         margin-top: 25%;
+        height: 20vh;
+        padding: 15px 20px;
       }
   .footer {
     margin-top: 4%;

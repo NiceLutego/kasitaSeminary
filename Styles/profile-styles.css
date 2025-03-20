@@ -115,6 +115,15 @@ body {
   border-radius: 10px;
 }
 
+.training-mentor {
+  display: flex;
+  align-items: center;
+  background: #eef3f7;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
 .team-member {
   display: flex;
   align-items: center;
@@ -251,4 +260,10 @@ body {
   text-align: center;
   font-size: 18px;
   color: red;
+}
+
+p {
+  justify-content: center;
+  text-align: justify;
+  align-items: center;
 }/*# sourceMappingURL=profile-styles.css.map */

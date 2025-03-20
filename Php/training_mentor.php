@@ -21,9 +21,11 @@ include 'header.php';
         while ($row = $result->fetch_assoc()) {
             echo "<div class='training-mentor'>";
             echo "<img src='" . htmlspecialchars($row['profile_pic']) . "' alt='Profile picture of " . htmlspecialchars($row['name']) . "' class='profile-pic'>";
+            echo "<div class='member-info'>";
             echo "<h3>" . htmlspecialchars($row['name']) . "</h3>";
             echo "<p><strong>Position:</strong> " . htmlspecialchars($row['position']) . "</p>";
             echo "<p>" . htmlspecialchars($row['bio']) . "</p>";
+            echo "</div>";
             echo "</div>";
         }
     } else {
