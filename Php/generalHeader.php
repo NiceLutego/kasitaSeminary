@@ -59,7 +59,7 @@ if (file_exists($lang_file)) {
                 </div>
             </li>
             <li class="header__nav__menu__item drop-down">
-                <a href="javascript:void(0);" class="header__nav__menu__item__drop"><?php echo $lang['administration']; ?></a>
+                <a href="javascript:void(0);" class="header__nav__menu__item__drop"><?php echo $lang['offices']; ?></a>
                 <div class="dropdown-content">
                     <a href="../Php/school_mgmt_team.php"><?php echo $lang['school_mgmt_team']; ?></a>
                     <a href="../Php/rector.php"><?php echo $lang['rector']; ?></a>

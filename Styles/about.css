@@ -62,7 +62,7 @@ body {
   height: 8vh;
   font-size: 2vw;
   align-items: center;
-  margin-left: 45%;
+  margin-left: 40%;
   margin-bottom: 2%;
   border-radius: 10px;
   background-color: indigo;
@@ -113,22 +113,16 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .about {
-    padding: 2rem;
+    padding: 1.2rem;
     flex: 1;
   }
   .about__header {
-    margin-top: 35%;
+    margin-top: 1%;
     text-align: center;
   }
   .about__header__text {
     font-size: 2rem;
     color: #004d40;
-  }
-  .seebtn {
-    width: 70%;
-    transform: translateX(-50%);
-    font-size: 4.5vw;
-    font-weight: 600;
   }
   .about__name__container {
     padding: 1rem;
@@ -136,11 +130,23 @@ body {
   .about__name__container p {
     padding: 1rem;
     border-radius: 8px;
-    font-size: 2.2vw;
+    font-size: 3.2vw;
+  }
+  .about__name .seebtn {
+    width: 70%;
+    transform: translateX(-50%);
+    font-size: 4.5vw;
+    font-weight: 600;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 0;
+    padding-bottom: 5%;
   }
   .footer {
     padding: 1rem 0.5rem;
     background-color: rgb(21, 34, 78);
+    transform: translateY(-35%);
   }
   .footer .footer__links {
     flex-direction: column;

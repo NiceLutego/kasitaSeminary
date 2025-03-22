@@ -66,7 +66,10 @@ p {
 
 @media (max-width: 600px) {
   .history{
-    margin: 4.5rem auto;
+    margin-top: 4.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10rem;
   }
   .footer {
     border-radius: 10px;

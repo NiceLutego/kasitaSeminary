@@ -28,14 +28,13 @@ include '../Php/generalHeader.php';
 </div>
 <footer class="footer">
       <div class="footer__links">
-        <a href="../Pages/index.html">Home</a>
-        <a href="../Php/about.php">About</a>
-        <a href="../Php/staff_profiles.php">Staff</a>
-        <a href="../Pages/login.html">Administration</a>
-        <a href="../Php/departments.php">Departments</a>
-        <a href="../Php/contacts.php">Contact</a>
+        <a href="../Pages/index.php"><?php echo $lang['home'];?></a>
+        <a href="../Php/about.php"><?php echo $lang['about'];?></a>
+        <a href="../Php/staff_profiles.php"><?php echo $lang['staff'];?></a>
+        <a href="../Php/photo_gallery.php"><?php echo $lang['photos'];?></a>
+        <a href="../Php/contacts.php"><?php echo $lang['contacts'];?></a>
       </div>
-      <p>&copy; 2025 Kasita Seminary. All Rights Reserved.</p>
+      <p>&copy; 2025 <?php echo $lang['kasita_seminary_rights'];?></p>
     </footer>
     <script src="../js/main.js"></script>
 </body>

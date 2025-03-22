@@ -156,6 +156,7 @@
     transform: rotate(-45deg) translate(3px, -7px);
   }
   .header__nav.open {
+    transition: all 0.5s ease-in-out;
     visibility: visible;
   }
   .header__nav__menu {
@@ -172,6 +173,7 @@
     transform: translateY(-100%);
   }
   .header__nav__menu.open {
+    transition: all 0.5s ease-in-out;
     transform: translateY(0);
   }
   .header__nav__menu__item {
@@ -196,21 +198,27 @@
     width: 15vw;
   }
   .header__nav__menu__item:nth-child(1) {
+    transition: ease-in-out;
     transition-delay: 0.25s;
   }
   .header__nav__menu__item:nth-child(2) {
+    transition: ease-in-out;
     transition-delay: 0.35s;
   }
   .header__nav__menu__item:nth-child(3) {
+    transition: ease-in-out;
     transition-delay: 0.45s;
   }
   .header__nav__menu__item:nth-child(4) {
+    transition: ease-in-out;
     transition-delay: 0.55s;
   }
   .header__nav__menu__item:nth-child(5) {
+    transition: ease-in-out;
     transition-delay: 0.65s;
   }
   .header__nav__menu__item:nth-child(6) {
+    transition: ease-in-out;
     transition-delay: 0.75s;
   }
 }/*# sourceMappingURL=generalHeader.css.map */

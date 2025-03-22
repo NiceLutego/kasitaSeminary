@@ -5,6 +5,10 @@ $secondary-color: #1abc9c;
   transition: all 0.5s ease-in-out;
 }
 /* General Styles */
+.about__name__division{
+  margin-top: 2%;
+  // border: 3px red solid;
+}
 .about__name__division__2 {
   margin-top: 10%;
   &__name {
@@ -125,7 +129,8 @@ $secondary-color: #1abc9c;
   height: 8vh;
   font-size: 2vw;
   align-items: center;
-  margin-left: 35%;
+  margin-left: 50%;
+  transform: translateX(-50%);
   margin-bottom: 2%;
   border-radius: 10px;
   background-color: indigo;
@@ -144,22 +149,21 @@ $secondary-color: #1abc9c;
 @media (max-width: 768px) {
   .about__name__division__2 {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     margin-top: 10%;
+    height: auto;
     &__name {
       margin-top: 10%;
       text-align: center;
       font-size: 1.8rem;
       font-weight: 600;
       color: teal;
-  
-  
       &__row{
         display: flex;
         flex-flow: column nowrap;
         gap: 1rem;
         height: 100vh;
-  
+        margin-bottom: 25%;
         &__1{
           height: 50vh;
           margin-top: 2%;
@@ -219,23 +223,30 @@ $secondary-color: #1abc9c;
             background-repeat: no-repeat;
           }
         }
+        .seebtn{
+          margin-bottom: 25%;
+          width: 70vw;
+          transform: translateX(-50%);
+          font-size: 4.2vw;
+          font-weight: 600;
+          margin-top: 2%;
+          margin-left: 50%;
+          height: 8vh;
+          padding: 15px 20px;
+
+          &:hover{
+            background-color: limegreen;
+            transition: all 1s ease-in-out;
+            color: indigo;
+          }        
+        }  
       }
 
-      .seebtn{
-        margin-top: 2%;
-        width: 70%;
-        transform: translateX(-30%);
-        font-size: 4.5vw;
-        font-weight: 600;
-        margin-top: 25%;
-        height: 20vh;
-        padding: 15px 20px;
-      }
   .footer {
-    margin-top: 4%;
+    margin-top: 60%;
     padding: 1rem 0.5rem;
     background-color: rgb(21, 34, 78);
-
+    height: 60vh;
     .footer__links {
       flex-direction: column;
       gap: 0.5rem;

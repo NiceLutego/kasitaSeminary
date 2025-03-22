@@ -122,7 +122,8 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .about__outside {
-    margin-top: 30%;
+    margin-top: 20%;
+    margin-bottom: 18%;
   }
   .about__outside div {
     flex-direction: column;
@@ -130,6 +131,7 @@
     text-align: center;
   }
   .footer {
+    margin-top: 10%;
     padding: 1rem 0.5rem;
   }
   .footer .footer__links {

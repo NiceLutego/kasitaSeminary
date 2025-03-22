@@ -32,15 +32,15 @@ include '../Php/generalHeader.php';
           <div class="announcement-slider">
             <div class="slides">
               <div class="slide">
-                <img src="../Images/kasita1.jpg" alt="Form Six Results">
+                <img src="../Images/comlab1.jpg" alt="Form Six Results">
                 <p>Form Six Results 2025 are out! <a href="../Php/result.php">Check now</a></p>
               </div>
               <div class="slide">
-                <img src="../images/announcement2.jpg" alt="Announcement 2">
+                <img src="../Images/building.jpg" alt="Announcement 2">
                 <p>Admissions for next academic year are open. <a href="#contact">Apply Now</a></p>
               </div>
               <div class="slide">
-                <img src="../images/announcement3.jpg" alt="Announcement 3">
+                <img src="../Images/biology.jpg" alt="Announcement 3">
                 <p>New school uniforms available at the administration office.</p>
               </div>
             </div>
@@ -48,12 +48,12 @@ include '../Php/generalHeader.php';
         </section>
       </div>
     </div>
+  </div>
     <footer class="footer">
       <div class="footer__links">
         <a href="../Pages/index.php"><?php echo $lang['home'];?></a>
         <a href="../Php/about.php"><?php echo $lang['about'];?></a>
         <a href="../Php/staff_profiles.php"><?php echo $lang['staff'];?></a>
-        <a href="../Pages/login.html"><?php echo $lang['administration'];?></a>
         <a href="../Php/photo_gallery.php"><?php echo $lang['photos'];?></a>
         <a href="../Php/contacts.php"><?php echo $lang['contacts'];?></a>
       </div>

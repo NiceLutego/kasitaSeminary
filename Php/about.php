@@ -16,8 +16,9 @@ include '../Php/generalHeader.php';
             
           </span>
       </div>
-      <button type="button" onclick="location.href='../Php/ordinary_level.php'" class="seebtn"><?php echo $lang['see_more'];?></button>
+      <button type="button" style="transform:translateX(-50%);" onclick="location.href='../Php/ordinary_level.php'" class="seebtn"><?php echo $lang['see_more'];?></button>
     </div>
+</div>
 <footer class="footer">
   <div class="footer__links">
     <a href="../Pages/index.html"><?php echo $lang['home'];?></a>

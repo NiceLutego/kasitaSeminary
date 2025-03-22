@@ -48,10 +48,11 @@ include '../Php/generalHeader.php';
   <div class="footer__links">
     <a href="../Pages/index.php"><?php echo $lang['home'];?></a>
     <a href="../Php/about.php"><?php echo $lang['about'];?></a>
-    <a href="../Pages/login.html"><?php echo $lang['administration'];?></a>
+    <a href="../Php/staff_profiles.php"><?php echo $lang['staff'];?></a>
+    <a href="../Php/photo_gallery.php"><?php echo $lang['photos'];?></a>
     <a href="../Php/contacts.php"><?php echo $lang['contacts'];?></a>
   </div>
-  <p>&copy; 2025 Kasita Minor Seminary. All Rights Reserved.</p>
+  <p>&copy; 2025 <?php echo $lang['kasita_seminary_rights'];?></p>
 </footer>
     <script src="../js/main.js"></script>
 </body>

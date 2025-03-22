@@ -190,6 +190,7 @@ a {
   margin-top: auto;
   width: 100%;
   margin-left: 0;
+  margin-bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,6 +218,10 @@ p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .main {
+    height: 180vh;
+    margin-bottom: 30%;
+  }
   .home__1 {
     margin-top: 20%;
     padding: 2rem;
@@ -231,6 +236,7 @@ p {
   .footer {
     border-radius: 10px;
     padding: 1rem 0.5rem;
+    margin-top: 20%;
   }
   .footer .footer__links {
     flex-direction: column;

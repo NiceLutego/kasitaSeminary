@@ -7,6 +7,7 @@
   font-size: 1.8rem;
   color: #008080;
   font-weight: 600;
+  border: none;
 }
 .about__name__division__1__rows__1 {
   display: flex;
@@ -116,20 +117,20 @@
     background-repeat: no-repeat;
   }
 }
-
-.seebtn {
+.about__name__division .seebtn {
   width: 20vw;
   height: 8vh;
   font-size: 2vw;
   align-items: center;
-  margin-left: 37%;
+  margin-left: 50%;
+  transform: translateX(-50%);
   margin-bottom: 2%;
   border-radius: 10px;
   background-color: indigo;
   font-weight: 500;
   color: #fff;
 }
-.seebtn:hover {
+.about__name__division .seebtn:hover {
   background-color: limegreen;
   transition: all 1s ease-in-out;
   color: indigo;
@@ -167,15 +168,21 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .about__name__division {
+    height: 700vh;
+    display: flex;
+    flex-flow: column nowrap;
+  }
   .about__name__division__1__name {
-    margin-top: 33%;
+    margin-top: 5%;
   }
   .about__name__division__1__rows__1 {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    margin-bottom: 3%;
   }
   .about__name__division__1__rows__1__1, .about__name__division__1__rows__1__2 {
     width: 100%;
@@ -190,9 +197,11 @@
   }
   .about__name__division__1__rows__2 {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    margin-top: 30%;
+    margin-bottom: 10%;
   }
   .about__name__division__1__rows__2__1, .about__name__division__1__rows__2__2 {
     width: 100%;
@@ -205,14 +214,27 @@
     line-height: 4vh;
     font-weight: 500;
   }
-  .seebtn {
-    width: 70%;
-    transform: translateX(-30%);
-    font-size: 4.5vw;
+  .about__name__division .seebtn {
+    width: 70vw;
+    height: 8vh;
+    font-size: 3.2vw;
+    align-items: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20%;
+    border-radius: 10px;
+    background-color: indigo;
     font-weight: 600;
+    color: #fff;
+  }
+  .about__name__division .seebtn:hover {
+    background-color: limegreen;
+    transition: all 1s ease-in-out;
+    color: indigo;
   }
   .footer {
     padding: 1rem 0.5rem;
+    margin-top: auto;
   }
   .footer .footer__links {
     flex-direction: column;

@@ -4,13 +4,6 @@ $secondary-color: #1abc9c;
 @mixin transition-ease{
   transition: all 0.5s ease-in-out;
 }
-
-body { 
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
- }
 .container { 
   margin-top: 10%;
   display: flex; 
@@ -20,6 +13,7 @@ body {
 
   @media screen and (max-width:768px){
     margin-top: 10%;
+    margin-bottom: 20%;
     .Rector{
       margin-top: 8%;
     }
